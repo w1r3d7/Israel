@@ -1,0 +1,137 @@
+.header {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 50%;
+  background-image: url("../img/bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+
+  @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-desktop@2x.jpg");
+  }
+
+
+  @media (max-width: $mobile-width) {
+    padding-top: 20px;
+    padding-bottom: 540px;
+    background-image: url("../img/bg-mobile.jpg");
+    background-position: center 32px;
+    background-size: unset;
+
+    @media (min-resolution: $retina-dpi),(min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-mobile@2x.jpg");
+    }
+  }
+}
+
+.header__information {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: flex-end;
+    left: 8px;
+  }
+}
+
+.header__information-logo-link {
+  position: relative;
+  left: -11px;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    left: -8px;
+    width: 120px;
+    height: 42px;
+  }
+}
+
+.header__information-phone {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: $color-black;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.header__information-order {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  font-variant: small-caps;
+  border-bottom: 1px dashed $color-black;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.header__description {
+  position: absolute;
+  bottom: 19%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+
+  @media (max-width: $tablet-width) {
+    bottom: 26%;
+  }
+
+  @media (max-width: $mobile-width) {
+    bottom: 33%;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.header__scroll {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: 132px;
+  background-image: url("../img/scroll.png");
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width) {
+    bottom: 3%;
+  }
+
+  @media (max-width: $mobile-width) {
+    bottom: 9%;
+  }
+}

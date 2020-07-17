@@ -353,9 +353,9 @@ template {
 body {
   min-width: 320px;
   font-family: "Fira Sans", "Arial", sans-serif;
-  color: #000000;
-  font-size: 22px;
-  line-height: 34px;
+  color: #484848;
+  font-size: 15px;
+  line-height: 140%;
   font-weight: normal; }
 
 img {
@@ -364,6 +364,16 @@ img {
 
 a {
   text-decoration: none; }
+
+.container {
+  max-width: 1142px;
+  margin: 0 auto;
+  padding-left: 12px;
+  padding-right: 17px; }
+  @media (max-width: 767px) {
+    .container {
+      padding-left: 16px;
+      padding-right: 16px; } }
 
 .visually-hidden,
 input[type="checkbox"].visually-hidden,
@@ -379,3 +389,125 @@ input[type="radio"].visually-hidden {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
+
+.header {
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 50%;
+  background-image: url("../img/bg-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .header {
+      background-image: url("../img/bg-desktop@2x.jpg"); } }
+  @media (max-width: 767px) {
+    .header {
+      padding-top: 20px;
+      padding-bottom: 540px;
+      background-image: url("../img/bg-mobile.jpg");
+      background-position: center 32px;
+      background-size: unset; } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+    .header {
+      background-image: url("../img/bg-mobile@2x.jpg"); } }
+
+.header__information {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (max-width: 767px) {
+    .header__information {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      left: 8px; } }
+
+.header__information-logo-link {
+  position: relative;
+  left: -11px; }
+  @media (max-width: 767px) {
+    .header__information-logo-link {
+      position: absolute;
+      left: -8px;
+      width: 120px;
+      height: 42px; } }
+
+.header__information-phone {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #484848; }
+  .header__information-phone:hover, .header__information-phone:focus {
+    color: #ffc341; }
+  @media (max-width: 767px) {
+    .header__information-phone {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 17px; } }
+
+.header__information-order {
+  padding: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  font-variant: small-caps;
+  border-bottom: 1px dashed #484848;
+  cursor: pointer; }
+  .header__information-order:hover, .header__information-order:focus {
+    color: #ffc341; }
+  @media (max-width: 767px) {
+    .header__information-order {
+      font-size: 14px;
+      line-height: 17px; } }
+
+.header__description {
+  position: absolute;
+  bottom: 19%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12); }
+  @media (max-width: 1023px) {
+    .header__description {
+      bottom: 26%; } }
+  @media (max-width: 767px) {
+    .header__description {
+      bottom: 33%;
+      font-size: 20px;
+      line-height: 24px; } }
+
+.header__scroll {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 76px;
+  height: 132px;
+  background-image: url("../img/scroll.png"); }
+  .header__scroll:hover, .header__scroll:focus {
+    opacity: 0.5; }
+  @media (max-width: 1023px) {
+    .header__scroll {
+      bottom: 3%; } }
+  @media (max-width: 767px) {
+    .header__scroll {
+      bottom: 9%; } }
