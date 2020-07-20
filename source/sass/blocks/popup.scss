@@ -3,8 +3,17 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: #ebebeb;
+  background-color: #ebebeb;
   opacity: 0.95;
+
+  @media (max-width: $mobile-width) {
+    background-color: #ffffff;
+    opacity: 1;
+  }
+}
+
+.popup--close {
+  display: none;
 }
 
 .popup__wrapper {
@@ -15,16 +24,34 @@
   width: 480px;
   box-sizing: border-box;
   min-height: 521px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $mobile-width) {
+    top: 0;
+    left: 0;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+.popup__wrapper--order {
   padding-left: 48px;
   padding-top: 56px;
   padding-right: 72px;
   padding-bottom: 40px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-top: 170px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+  }
 }
 
-.popup__wrapper--order-complite {
+.popup__wrapper--close {
   display: none;
 }
 
@@ -37,6 +64,8 @@
 .popup__description {
   margin: 0;
   margin-bottom: 32px;
+  font-size: 15px;
+  line-height: 170%;
 }
 
 .popup__form input:not([type="checkbox"]) {
@@ -70,24 +99,6 @@
   }
 }
 
-.popup__form button {
-  display: block;
-  padding: 0;
-  width: 264px;
-  min-height: 59px;
-  margin: 0 auto;
-  margin-top: 24px;
-  margin-bottom: 16px;
-  font-size: 17px;
-  line-height: 20px;
-  font-variant: small-caps;
-  color: #ffffff;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
-  background-image: $gradient-yellow;
-  border-radius: 80px;
-  border: none;
-}
-
 .popup__form-agreement-wrapper {
   width: 264px;
   margin: 0 auto;
@@ -103,10 +114,33 @@
   position: absolute;
   width: 18px;
   height: 17px;
-  top: 0;
-  right: 0;
+  top: 31px;
+  right: 31px;
   padding: 0;
   border: none;
   background-color: transparent;
   background-image: url("../img/icons/icon-close.svg");
+}
+
+.popup__wrapper--order-complite {
+  padding-top: 216px;
+  padding-left: 60px;
+  padding-right: 60px;
+  background-image: url("../img/checkmark.svg");
+  background-size: 66px 64px;
+  background-repeat: no-repeat;
+  background-position: center 120px;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-top: 200px;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: center;
+  }
+}
+
+.popup__wrapper--order-complite .popup__title,
+.popup__wrapper--order-complite .popup__description {
+  text-align: center;
 }
