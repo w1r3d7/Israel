@@ -35,13 +35,13 @@
       <button class="popup__close"><span class="visually-hidden"></span></button>
       <p class="popup__description">Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
       <form class="popup__form">
-        <label class="visually-hidden" for="name">Введите Ваше имя</label>
-        <input type="text" name="name" id="name" placeholder="Имя" required="">
-        <label class="visually-hidden" for="phone">Введите Ваше имя</label>
+        <input type="text" name="name" id="name" placeholder="Имя">
+        <label for="name"><span class="visually-hidden">Введите Ваше имя</span></label>
         <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="\d*" required="">
+        <label class="visually-hidden" for="phone">Введите Ваше имя</label>
         <button class="btn" type="submit">Перезвоните мне</button>
         <div class="popup__form-agreement-wrapper">
-          <input type="checkbox" name="agreement" id="agreement" required="">
+          <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required="">
           <label for="agreement">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </div>
       </form>

@@ -3,15 +3,13 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #ebebeb;
-  opacity: 0.95;
+  background-color: rgba(235, 235, 235, 0.95);
 
   @media (max-width: $mobile-width) {
     overflow-y: scroll;
     height: 100vh;
     position: fixed;
     background-color: #ffffff;
-    opacity: 1;
   }
 }
 
@@ -43,7 +41,7 @@
 .popup__wrapper--order {
   padding-left: 48px;
   padding-top: 56px;
-  padding-right: 72px;
+  padding-right: 73px;
   padding-bottom: 40px;
 
   @media (max-width: $mobile-width) {
@@ -72,11 +70,15 @@
   line-height: 170%;
 }
 
+.popup__form {
+  position: relative;
+}
+
 .popup__form input:not([type="checkbox"]) {
   width: 100%;
   height: 59px;
   box-sizing: border-box;
-  padding-left: 44px;
+  padding-left: 37px;
   margin-bottom: 8px;
   font-size: 17px;
   line-height: 20px;
@@ -94,17 +96,70 @@
     opacity: 0.5;
   }
 
-  &:hover,
-  &:focus {
-    background-image: linear-gradient(white, white), $gradient-yellow;
-    background-origin: border-box;
-    background-clip: content-box, border-box;
-    border: 4px solid transparent;
+  &:valid {
+    border-color: $color-black;
+    outline: none;
+  }
+
+  &:invalid {
+    border-color: #FF0000;
+    box-shadow: none;
+    outline: none;
   }
 }
 
+.popup__form button,
+.popup__button {
+  margin-left: 60px;
+  margin-top: 15px;
+  margin-bottom: 16px;
+}
+
+.popup__form-agreement-wrapper label {
+  display: block;
+  position: relative;
+  padding-left: 24px;
+  user-select: none;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-image: $gradient-yellow;
+    border-radius: 2px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    z-index: 2;
+    background-color: #ffffff;
+  }
+}
+
+.popup__form-agreement-wrapper input[type="checkbox"]:checked + label::after {
+  top: 2px;
+  left: 2px;
+  width:8px;
+  height:4px;
+  border:4px solid $color-black;
+  background-color: transparent;
+  transform: rotate(-45deg);
+  border-top:none;
+  border-right:none;
+}
+
 .popup__form-agreement-wrapper {
-  width: 264px;
+  width: 298px;
+  box-sizing: border-box;
+  padding-left: 28px;
   margin: 0 auto;
 }
 
