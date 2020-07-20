@@ -1,0 +1,122 @@
+.about-program {
+  text-align: center;
+  padding-bottom: 48px;
+  background-image: url("../img/about-program-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+
+.about-program__wrapper {
+  padding-left: 11%;
+  padding-right: 11%;
+
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.about-program__title {
+  @include h2();
+
+  margin-bottom: 24px;
+}
+
+.about-program__description {
+  margin: 0 auto;
+  margin-bottom: 48px;
+  width: 67%;
+  font-size: 17px;
+  line-height: 170%;
+
+  @media (max-width: $mobile-width) {
+    width: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-align: left;
+  }
+}
+
+.about-program__video-wrapper {
+  position: relative;
+}
+
+.about-program__video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 96px;
+  height: 96px;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.32);
+  font: inherit;
+  cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    width: 80px;
+    height: 80px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 64px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    @media (max-width: $mobile-width) {
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 15px;
+    border-color: transparent transparent transparent $color-blue;
+    z-index: 2;
+
+    @media (max-width: $mobile-width) {
+      border-width: 7.5px 0 7.5px 12px;
+    }
+  }
+}
+
+
+.about-program__video-button:hover,
+.about-program__video-button:focus {
+  &::after {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  &::before {
+    border-color: transparent transparent transparent #63D3FD;
+  }
+}
+
+.about-program__video-button:active {
+  &::after {
+    background-color: #f4f4f4;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  }
+
+  &::before {
+    border-color: transparent transparent transparent $color-blue;
+  }
+}
