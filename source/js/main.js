@@ -15,11 +15,11 @@
     popupOrderCompliteBlock.classList.add('popup__wrapper--close');
   };
 
-  popupOrderInputs.forEach(function (it) {
-    it.addEventListener('keydown', function (evt) {
+  for (var j = 0; j < popupOrderInputs.length; j++) {
+    popupOrderInputs[j].addEventListener('keydown', function (evt) {
       evt.stopPropagation();
     });
-  });
+  }
 
   var onEscapePress = function (evt) {
     if (evt.key === 'Escape') {
@@ -35,11 +35,11 @@
     document.addEventListener('keydown', onEscapePress);
   });
 
-  popupCloseButtons.forEach(function (it) {
-    it.addEventListener('click', function () {
+  for (var i = 0; i < popupCloseButtons.length; i++) {
+    popupCloseButtons[i].addEventListener('click', function () {
       closePopups();
     });
-  });
+  }
 
   popupCloseCompliteBlock.addEventListener('click', function () {
     closePopups();

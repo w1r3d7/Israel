@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  top: -78px;
+  padding-bottom: 59%;
+  background-image: url("../img/bg-hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  z-index: -1;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-hero-desktop@2x.jpg");
+  }
+
+  @media (max-width: $tablet-width) {
+    top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 540px;
+    background-image: url("../img/bg-hero-mobile.jpg");
+    background-size: unset;
+    background-position: center -32px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-hero-mobile@2x.jpg");
+    }
+  }
+}
+
+.hero h1 {
+  position: absolute;
+  bottom: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 343px;
+  margin-bottom: 2.5%;
+  font-size: 24px;
+  line-height: 29px;
+  font-weight: 700;
+  text-align: center;
+  color: $color-white;
+  text-shadow: $shadow-text;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    bottom: 27%;
+  }
+
+  @media (max-width: $mobile-width) {
+    bottom: 39%;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 76px;
+  height: 132px;
+  background-image: url("../img/scroll-down.png");
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+
+  @media (max-width: $tablet-width) {
+    bottom: 3%;
+  }
+
+  @media (max-width: $mobile-width) {
+    bottom: 10.5%;
+  }
+}
