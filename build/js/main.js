@@ -24,13 +24,20 @@
     popupOrderCompliteBlock.classList.add('popup__wrapper--close');
   };
 
-  var onInputChange = function (evt) {
-    evt.stopPropagation();
-    storage.setItem(evt.target.name, evt.target.value);
+  var onInputChange = function (inputEvent) {
+    inputEvent.stopPropagation();
+    storage.setItem(inputEvent.target.name, inputEvent.target.value);
+  };
+
+  var inputPhoneValidate = function (phoneEvent) {
+    phoneEvent.target.value = phoneEvent.target.value.replace(/[^0-9+()-]/g, '');
   };
 
   for (var j = 0; j < popupOrderInputs.length; j++) {
     popupOrderInputs[j].addEventListener('keyup', onInputChange);
+    if (popupOrderInputs[j].type === 'tel') {
+      popupOrderInputs[j].addEventListener('input', inputPhoneValidate);
+    }
   }
 
   var onEscapePress = function (evt) {

@@ -468,6 +468,7 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center top;
+  background-color: #f3f2ee;
   z-index: -1; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .hero {
