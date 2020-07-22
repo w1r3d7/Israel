@@ -5,9 +5,18 @@
   var popupOrderBlock = popupBlock.querySelector('.popup__wrapper--order');
   var popupCloseButtons = popupBlock.querySelectorAll('.popup__close');
   var popupOrderForm = popupOrderBlock.querySelector('form');
-  var popupOrderInputs = popupOrderForm.querySelectorAll('input');
+  var popupOrderInputs = popupOrderForm.querySelectorAll('input:not([type="checkbox"])');
   var popupOrderCompliteBlock = popupBlock.querySelector('.popup__wrapper--order-complite');
   var popupCloseCompliteBlock = popupOrderCompliteBlock.querySelector('.popup__button');
+
+  var storage = window.localStorage;
+
+  for (var k = 0; k < popupOrderInputs.length; k++) {
+    var inputName = popupOrderInputs[k].name;
+    if (storage.getItem(inputName)) {
+      popupOrderInputs[k].value = storage[inputName];
+    }
+  }
 
   var closePopups = function () {
     popupBlock.classList.add('popup--close');
@@ -15,10 +24,13 @@
     popupOrderCompliteBlock.classList.add('popup__wrapper--close');
   };
 
+  var onInputChange = function (evt) {
+    evt.stopPropagation();
+    storage.setItem(evt.target.name, evt.target.value);
+  };
+
   for (var j = 0; j < popupOrderInputs.length; j++) {
-    popupOrderInputs[j].addEventListener('keydown', function (evt) {
-      evt.stopPropagation();
-    });
+    popupOrderInputs[j].addEventListener('keyup', onInputChange);
   }
 
   var onEscapePress = function (evt) {

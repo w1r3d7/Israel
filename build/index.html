@@ -37,7 +37,6 @@
           <span class="visually-hidden">Прокрутить вниз</span>
         </a>
       </div>
-
     </section>
     <section class="page-main__about-program about-program">
       <div class="container about-program__wrapper">
@@ -58,25 +57,27 @@
   <div class="popup popup--close">
     <div class="popup__wrapper popup__wrapper--order popup__wrapper--close">
       <h3 class="popup__title">Заказать звонок</h3>
-      <button class="popup__close"><span class="visually-hidden"></span></button>
-      <p class="popup__description">Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
-      <form class="popup__form">
-        <input type="text" name="name" id="name" placeholder="Имя">
-        <label for="name"><span class="visually-hidden">Введите Ваше имя</span></label>
-        <input type="tel" name="phone" id="phone" placeholder="Телефон" pattern="\d*" required="">
-        <label class="visually-hidden" for="phone">Введите Ваше имя</label>
-        <button class="btn" type="submit">Перезвоните мне</button>
+      <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
+      <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
+      <form>
+        <label>
+          <input type="text" name="name" placeholder="Имя">
+        </label>
+        <label>
+          <input type="tel" name="phone" placeholder="Телефон">
+        </label>
+        <button type="submit">Перезвоните мне</button>
         <div class="popup__form-agreement-wrapper">
-          <input class="visually-hidden" type="checkbox" name="agreement" id="agreement" required="">
+          <input type="checkbox" name="agreement" id="agreement" required="">
           <label for="agreement">Нажимая на кнопку, вы даёте согласие на обработку персональных данных</label>
         </div>
       </form>
     </div>
     <div class="popup__wrapper popup__wrapper--order-complite popup__wrapper--close">
       <h3 class="popup__title">Заявка принята</h3>
-      <button class="popup__close"><span class="visually-hidden"></span></button>
+      <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
       <p class="popup__description">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-      <button class="popup__button btn" type="button">Понятно</button>
+      <button type="button">Понятно</button>
     </div>
   </div>
   <script src="js/main.js"></script>
