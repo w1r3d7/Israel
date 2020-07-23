@@ -375,6 +375,15 @@ a {
       padding-left: 16px;
       padding-right: 16px; } }
 
+.scroll-lock {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-height: 100vh;
+  overflow: hidden; }
+
 .visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -545,9 +554,6 @@ input[type="radio"].visually-hidden {
   background-color: rgba(235, 235, 235, 0.95); }
   @media (max-width: 767px) {
     .popup {
-      overflow-y: scroll;
-      height: 100vh;
-      position: fixed;
       background-color: #ffffff; } }
 
 .popup--close {
@@ -656,16 +662,31 @@ input[type="radio"].visually-hidden {
     font-weight: 500;
     font-variant: small-caps;
     opacity: 0.5; }
-  .popup__wrapper--order input:not([type="checkbox"]):valid {
-    border-color: #484848;
-    outline: none; }
-  .popup__wrapper--order input:not([type="checkbox"]):invalid {
-    border-color: #ff0000;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    outline: none; }
   .popup__wrapper--order input:not([type="checkbox"]):focus {
     border-color: #ffdc34; }
+
+.popup__input-wrapper label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.popup__input-wrapper--invalid input:not([type="checkbox"]) {
+  border-color: #ff0000;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none; }
+
+.popup__input-wrapper--valid input:not([type="checkbox"]) {
+  border-color: #484848;
+  outline: none; }
 
 .popup__wrapper--order button:not(.popup__close),
 .popup__wrapper--order-complite button:not(.popup__close) {
@@ -754,6 +775,12 @@ input[type="radio"].visually-hidden {
   padding-left: 28px;
   margin: 0 auto; }
 
+.popup__form-agreement-wrapper--valid label {
+  color: #484848; }
+
+.popup__form-agreement-wrapper--invalid label {
+  color: #ff0000; }
+
 .popup__close {
   position: absolute;
   width: 18px;
@@ -770,11 +797,14 @@ input[type="radio"].visually-hidden {
 .popup__wrapper--order-complite {
   padding-top: 216px;
   padding-left: 60px;
-  padding-right: 60px;
-  background-image: url("../img/checkmark.svg");
-  background-size: 66px 64px;
-  background-repeat: no-repeat;
-  background-position: center 120px; }
+  padding-right: 60px; }
+  .popup__wrapper--order-complite::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/checkmark.svg");
+    background-size: 66px 64px;
+    background-repeat: no-repeat;
+    background-position: center 120px; }
   @media (max-width: 767px) {
     .popup__wrapper--order-complite {
       width: 100%;

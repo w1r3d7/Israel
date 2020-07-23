@@ -17,10 +17,10 @@ $shadow-icon: 0 1px 4px rgba(0, 0, 0, 0.05);
 $shadow-text: 0 1px 4px rgba(0, 0, 0, 0.12);
 $shadow-btn-click: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), #ffffff;
 
-$input-border-default: #e3e3e3;
-$input-border-correct: #484848;
-$input-border-invalid: #ff0000;
-$input-border-focus: #ffdc34;
+$input-default: #e3e3e3;
+$input-valid: #484848;
+$input-invalid: #ff0000;
+$input-focus: #ffdc34;
 
 $heading-font: "Montserrat", "Verdana", sans-serif;
 $main-font: "Fira Sans", "Arial", sans-serif;

@@ -6,9 +6,6 @@
   background-color: $popup-overlay;
 
   @media (max-width: $mobile-width) {
-    overflow-y: scroll;
-    height: 100vh;
-    position: fixed;
     background-color: $color-white;
   }
 }
@@ -84,7 +81,7 @@
   line-height: 20px;
   font-weight: 500;
   opacity: 0.87;
-  border: 2px solid $input-border-default;
+  border: 2px solid $input-default;
   border-radius: 80px;
   outline: none;
 
@@ -96,20 +93,33 @@
     opacity: 0.5;
   }
 
-  &:valid {
-    border-color: $input-border-correct;
-    outline: none;
-  }
-
-  &:invalid {
-    border-color: $input-border-invalid;
-    box-shadow: none;
-    outline: none;
-  }
-
   &:focus {
-    border-color: $input-border-focus;
+    border-color: $input-focus;
   }
+}
+
+.popup__input-wrapper label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.popup__input-wrapper--invalid input:not([type="checkbox"]) {
+  border-color: $input-invalid;
+  box-shadow: none;
+  outline: none;
+}
+
+.popup__input-wrapper--valid input:not([type="checkbox"]) {
+  border-color: $input-valid;
+  outline: none;
 }
 
 .popup__wrapper--order button:not(.popup__close),
@@ -175,6 +185,14 @@
   margin: 0 auto;
 }
 
+.popup__form-agreement-wrapper--valid label {
+  color: $input-valid;
+}
+
+.popup__form-agreement-wrapper--invalid label {
+  color: $input-invalid;
+}
+
 .popup__close {
   position: absolute;
   width: 18px;
@@ -196,10 +214,16 @@
   padding-top: 216px;
   padding-left: 60px;
   padding-right: 60px;
-  background-image: url("../img/checkmark.svg");
-  background-size: 66px 64px;
-  background-repeat: no-repeat;
-  background-position: center 120px;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    background-image: url("../img/checkmark.svg");
+    background-size: 66px 64px;
+    background-repeat: no-repeat;
+    background-position: center 120px;
+  }
 
   @media (max-width: $mobile-width) {
     width: 100%;
