@@ -6,6 +6,7 @@ const orderPopup = popup.querySelector('.popup__wrapper--order');
 const orderPopupInputs = orderPopup.querySelectorAll('input:not([type=checkbox])');
 const orderPopupCheckbox = orderPopup.querySelector('input[type=checkbox]');
 const orderPopupForm = orderPopup.querySelector('form');
+const orderPopupInputName = popup.querySelector('input[name=name]');
 
 const orderComplitePopup = popup.querySelector('.popup__wrapper--order-complite');
 const orderComplitePopupButton = orderComplitePopup.querySelector('button:not(.popup__close)');
@@ -72,6 +73,7 @@ const openPopup = () => {
   popup.classList.remove('popup--close');
   orderPopup.classList.remove('popup__wrapper--close');
   body.classList.add('scroll-lock');
+  orderPopupInputName.focus();
   document.addEventListener('keydown', onEscapePress);
 }
 

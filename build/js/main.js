@@ -7,6 +7,7 @@ var orderPopup = popup.querySelector('.popup__wrapper--order');
 var orderPopupInputs = orderPopup.querySelectorAll('input:not([type=checkbox])');
 var orderPopupCheckbox = orderPopup.querySelector('input[type=checkbox]');
 var orderPopupForm = orderPopup.querySelector('form');
+var orderPopupInputName = popup.querySelector('input[name=name]');
 var orderComplitePopup = popup.querySelector('.popup__wrapper--order-complite');
 var orderComplitePopupButton = orderComplitePopup.querySelector('button:not(.popup__close)');
 var body = document.querySelector('body');
@@ -69,6 +70,7 @@ var openPopup = function openPopup() {
   popup.classList.remove('popup--close');
   orderPopup.classList.remove('popup__wrapper--close');
   body.classList.add('scroll-lock');
+  orderPopupInputName.focus();
   document.addEventListener('keydown', onEscapePress);
 };
 

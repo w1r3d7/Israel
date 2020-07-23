@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <div style="display:none">
+  <div class="visually-hidden">
     <include src="build/img/sprite_auto.svg"></include>
   </div>
   <header class="page-header header">
@@ -56,8 +56,12 @@
   </main>
   <div class="popup popup--close">
     <div class="popup__wrapper popup__wrapper--order popup__wrapper--close">
-      <h3 class="popup__title">Заказать звонок</h3>
-      <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
+      <h3>Заказать звонок</h3>
+      <button class="popup__close" type="button" aria-label="Закрыть окно">
+        <svg width="18" height="17">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
       <p>Оставьте ваши контактные данные, мы свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!</p>
       <form>
         <div class="popup__input-wrapper">
@@ -76,9 +80,16 @@
       </form>
     </div>
     <div class="popup__wrapper popup__wrapper--order-complite popup__wrapper--close">
-      <h3 class="popup__title">Заявка принята</h3>
-      <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
-      <p class="popup__description">Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+      <svg width="71" height="64">
+        <use xlink:href="#icon-checkmark"></use>
+      </svg>
+      <h3>Заявка принята</h3>
+      <button class="popup__close" type="button" aria-label="Закрыть окно">
+        <svg width="18" height="17">
+          <use xlink:href="#icon-close"></use>
+        </svg>
+      </button>
+      <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
       <button type="button">Понятно</button>
     </div>
   </div>
