@@ -1,0 +1,24 @@
+.header-hero-wrapper {
+  position: relative;
+  padding-bottom: 53%;
+  background-image: url("../img/bg-hero-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center top;
+  background-color: $color-hero-bg-fb;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-hero-desktop@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 500px;
+    background-image: url("../img/bg-hero-mobile.jpg");
+    background-size: unset;
+    background-position: center 32px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-hero-mobile@2x.jpg");
+    }
+  }
+}
