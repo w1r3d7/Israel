@@ -141,8 +141,19 @@
   }
 
   if (popup) {
+    var isClicked = false;
+
+    popup.addEventListener('mousedown', function (evt) {
+      if (evt.currentTarget === evt.target) {
+        isClicked = true;
+      }
+    });
+
     popup.addEventListener('click', function () {
-      closeAllPopups();
+      if (isClicked) {
+        closeAllPopups();
+      }
+      isClicked = false;
     });
   }
 })();
