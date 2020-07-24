@@ -470,25 +470,30 @@ input[type="radio"].visually-hidden {
       line-height: 17px; } }
 
 .header-hero-wrapper {
-  position: relative;
-  padding-bottom: 53%;
+  padding-bottom: 140px;
   background-image: url("../img/bg-hero-desktop.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 1366px 906px;
   background-position: center top;
-  background-color: #f3f2ee; }
+  background-color: #ffffff; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .header-hero-wrapper {
       background-image: url("../img/bg-hero-desktop@2x.jpg"); } }
   @media (max-width: 767px) {
     .header-hero-wrapper {
-      padding-bottom: 500px;
+      padding-bottom: 85px;
       background-image: url("../img/bg-hero-mobile.jpg");
-      background-size: unset;
+      background-size: 912px 605px;
       background-position: center 32px; } }
   @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
     .header-hero-wrapper {
       background-image: url("../img/bg-hero-mobile@2x.jpg"); } }
+
+.header-hero-wrapper__header {
+  margin-bottom: 460px; }
+  @media (max-width: 767px) {
+    .header-hero-wrapper__header {
+      margin-bottom: 274px; } }
 
 .hero {
   display: -webkit-box;
@@ -504,19 +509,13 @@ input[type="radio"].visually-hidden {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%); }
+          align-items: center; }
   @media (max-width: 1023px) {
     .hero {
       width: 98%; } }
   @media (max-width: 767px) {
     .hero {
-      min-height: 210px;
-      bottom: 3%; } }
+      min-height: 210px; } }
 
 .hero h1 {
   margin: 0;
@@ -536,6 +535,7 @@ input[type="radio"].visually-hidden {
       line-height: 24px; } }
 
 .hero a {
+  display: block;
   width: 76px;
   height: 132px;
   background-image: url("../img/scroll-down.png"); }
@@ -855,9 +855,14 @@ input[type="radio"].visually-hidden {
 .about-program {
   text-align: center;
   background-image: url("../img/about-program-bg.jpg");
+  background-color: #ffffff;
+  background-size: auto;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom; }
+  background-position: center 214px; }
+  @media (max-width: 767px) {
+    .about-program {
+      background-size: 130%;
+      background-position: center 201px; } }
 
 .about-program__wrapper {
   padding-left: 11%;
@@ -867,7 +872,7 @@ input[type="radio"].visually-hidden {
       padding-left: 0;
       padding-right: 0; } }
 
-.about-program__title {
+.about-program h2 {
   margin: 0;
   font-family: "Montserrat", "Verdana", sans-serif;
   font-size: 40px;
@@ -878,18 +883,24 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   margin-bottom: 24px; }
   @media (max-width: 767px) {
-    .about-program__title {
+    .about-program h2 {
       font-size: 32px;
       line-height: 39px; } }
 
-.about-program__description {
+.about-program p {
   margin: 0 auto;
   margin-bottom: 48px;
   width: 67%;
+  font-family: "Fira Sans", "Arial", sans-serif;
   font-size: 17px;
-  line-height: 170%; }
+  line-height: 170%;
+  color: #484848; }
   @media (max-width: 767px) {
-    .about-program__description {
+    .about-program p {
+      font-size: 16px;
+      line-height: 160%; } }
+  @media (max-width: 767px) {
+    .about-program p {
       width: auto;
       padding-left: 16px;
       padding-right: 16px;
@@ -897,6 +908,11 @@ input[type="radio"].visually-hidden {
 
 .about-program__video-wrapper {
   position: relative; }
+
+.about-program__video-wrapper img {
+  min-height: 224px;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .about-program__video-button {
   position: absolute;
@@ -911,7 +927,8 @@ input[type="radio"].visually-hidden {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.32);
   font: inherit;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   @media (max-width: 767px) {
     .about-program__video-button {
       width: 80px;

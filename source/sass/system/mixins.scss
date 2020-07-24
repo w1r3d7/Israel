@@ -35,6 +35,45 @@
   }
 }
 
+@mixin text-regular-lh170() {
+  font-family: $main-font;
+  font-size: 15px;
+  line-height: 170%;
+  color: $color-black;
+}
+
+@mixin text-regular-lh150() {
+  font-family: $main-font;
+  font-size: 15px;
+  line-height: 150%;
+  color: $color-black;
+}
+
+@mixin text-big-lh170() {
+  font-family: $main-font;
+  font-size: 17px;
+  line-height: 170%;
+  color: $color-black;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 160%;
+  }
+}
+
+@mixin text-big-lh150() {
+  font-family: $main-font;
+  font-size: 17px;
+  line-height: 150%;
+  color: $color-black;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 160%;
+  }
+}
+
+
 @mixin button() {
   display: block;
   padding: 0;

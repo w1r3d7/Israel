@@ -17,7 +17,7 @@
     <include src="build/img/sprite_auto.svg"></include>
   </div>
   <div class="header-hero-wrapper">
-    <header class="header">
+    <header class="header-hero-wrapper__header header">
       <div class="container header__wrapper">
         <div class="header__information">
           <a class="header__information-phone" href="tel:+97226216581" aria-label="Телефон компании">+ (972) 2 – 621 – 6581</a>
@@ -40,18 +40,20 @@
   <main class="page-main">
     <section class="page-main__about-program about-program">
       <div class="container about-program__wrapper">
-        <h2 class="about-program__title">О программе</h2>
-        <p class="about-program__description">«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+        <h2>О программе</h2>
+        <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
         <div class="about-program__video-wrapper">
           <button class="about-program__video-button" type="button"><span class="visually-hidden">Начать воспроизведение</span></button>
         <picture>
-          <img class="about-program__video-image" src="img/about-program-video.png" width="870" height="460" alt="О программе видео" srcset="img/about-program-video@2x.png 2x">
+          <source srcset="img/about-program-video.webp 1x, img/about-program-video@2x.webp 2x," type="image/webp">
+          <!-- 1х: 870px; 2x: 1740px -->
+          <img src="img/about-program-video.png" width="870" height="460" alt="О программе видео" srcset="img/about-program-video@2x.png 2x">
         </picture>
         </div>
       </div>
     </section>
     <section class="page-main__programs programs">
-      <h2 class="programs__title">Программы</h2>
+      <h2>Программы</h2>
     </section>
   </main>
   <div class="popup popup--close">

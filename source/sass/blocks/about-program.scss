@@ -1,9 +1,15 @@
 .about-program {
   text-align: center;
   background-image: url("../img/about-program-bg.jpg");
+  background-color: $color-white;
+  background-size: auto;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
+  background-position: center 214px;
+
+  @media (max-width: $mobile-width) {
+    background-size: 130%;
+    background-position: center 201px;
+  }
 }
 
 .about-program__wrapper {
@@ -17,18 +23,18 @@
   }
 }
 
-.about-program__title {
+.about-program h2 {
   @include h2();
 
   margin-bottom: 24px;
 }
 
-.about-program__description {
+.about-program p {
   margin: 0 auto;
   margin-bottom: 48px;
   width: 67%;
-  font-size: 17px;
-  line-height: 170%;
+
+  @include text-big-lh170();
 
   @media (max-width: $mobile-width) {
     width: auto;
@@ -42,6 +48,11 @@
   position: relative;
 }
 
+.about-program__video-wrapper img {
+  min-height: 224px;
+  object-fit: cover;
+}
+
 .about-program__video-button {
   position: absolute;
   top: 50%;
@@ -52,9 +63,10 @@
   transform: translate(-50%, -50%);
   border: none;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.32);
+  background-color: $color-white-transparent;
   font: inherit;
   cursor: pointer;
+  outline: none;
 
   @media (max-width: $mobile-width) {
     width: 80px;
@@ -70,7 +82,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    background-color: #ffffff;
+    background-color: $color-white;
 
     @media (max-width: $mobile-width) {
       width: 53px;
@@ -101,18 +113,18 @@
 .about-program__video-button:hover,
 .about-program__video-button:focus {
   &::after {
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: $shadow-icon;
   }
 
   &::before {
-    border-color: transparent transparent transparent #63d3fd;
+    border-color: transparent transparent transparent $color-blue-light;
   }
 }
 
 .about-program__video-button:active {
   &::after {
-    background-color: #f4f4f4;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    background-color: $color-gray-light;
+    box-shadow: $shadow-icon;
   }
 
   &::before {
