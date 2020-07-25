@@ -13,12 +13,22 @@
   box-sizing: border-box;
   padding-left: 100px;
   padding-right: 190px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
 }
 
 .programs h2 {
   @include h2();
 
   margin-bottom: 66px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 16px;
+    text-align: center;
+  }
 }
 
 .programs__list {
@@ -26,10 +36,29 @@
   margin-right: 7%;
   width: 27%;
   flex-shrink: 0;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-right: 0;
+    overflow-x: auto;
+  }
+}
+
+.programs__list li {
+  @media (max-width: $tablet-width) {
+    flex: 0 0 auto;
+  }
 }
 
 .programs__list li:not(:last-child) {
   margin-bottom: 4px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 8px;
+  }
 }
 
 .programs__item {
@@ -44,6 +73,9 @@
   background-color: transparent;
   text-align: left;
   cursor: pointer;
+  font-size: 15px;
+  line-height: 18px;
+  opacity: 0.87;
 
   &::before {
     position: absolute;
@@ -52,9 +84,20 @@
     width: 36px;
     height: 36px;
     top: 50%;
-    right: -16px;
     transform: translateY(-50%);
     background-repeat: no-repeat;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 48px;
+    padding-left: 52px;
+
+    &::before {
+      left: 14px;
+      width: 32px;
+      height: 32px;
+      background-size: contain;
+    }
   }
 }
 
@@ -160,6 +203,14 @@
   background-repeat: no-repeat, repeat;
   background-position: center right;
 
+  font-size: 16px;
+  line-height: 19px;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  color: $color-white;
+  text-shadow: $shadow-text;
+  opacity: 1;
+
   &:hover,
   &:focus {
     background-image: url("../img/arrow-end.svg"), $button-hover;
@@ -167,6 +218,23 @@
 
   &:active {
     background-image: url("../img/arrow-end.svg"), $button-active;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-right: 12px;
+    background-image: $button;
+    background-repeat: repeat;
+    background-position: unset;
+    border-radius: 60px;
+
+    &:hover,
+    &:focus {
+      background-image: $button-hover;
+    }
+
+    &:active {
+      background-image: $button-active;
+    }
   }
 }
 
@@ -176,12 +244,21 @@
 
 .programs__list-wrapper {
   display: flex;
+  flex-direction: row;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
 }
 
 .programs__descriptions-list h3 {
   @include h3();
 
   margin-bottom: 25px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 16px;
+  }
 }
 
 .programs__descriptions-list p {
@@ -202,4 +279,10 @@
 .programs__descriptions-item--active {
   display: block;
   padding-top: 16px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 31px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }

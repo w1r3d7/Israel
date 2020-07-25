@@ -1,6 +1,11 @@
 .page-main__about-program {
   padding-bottom: 48px;
   margin-bottom: 96px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 28px;
+    margin-bottom: 0;
+  }
 }
 
 .page-main__programs {

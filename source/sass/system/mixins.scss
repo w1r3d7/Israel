@@ -40,6 +40,11 @@
   font-size: 15px;
   line-height: 170%;
   color: $color-black;
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 160%;
+  }
 }
 
 @mixin text-regular-lh150() {
