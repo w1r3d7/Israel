@@ -45,7 +45,7 @@
         <div class="about-program__video-wrapper">
           <button class="about-program__video-button" type="button"><span class="visually-hidden">Начать воспроизведение</span></button>
         <picture>
-          <source srcset="img/about-program-video.webp 1x, img/about-program-video@2x.webp 2x," type="image/webp">
+          <source srcset="img/about-program-video.webp 1x, img/about-program-video@2x.webp 2x" type="image/webp">
           <!-- 1х: 870px; 2x: 1740px -->
           <img src="img/about-program-video.png" width="870" height="460" alt="О программе видео" srcset="img/about-program-video@2x.png 2x">
         </picture>
@@ -53,7 +53,41 @@
       </div>
     </section>
     <section class="page-main__programs programs">
-      <h2>Программы</h2>
+      <div class="container programs-wrapper">
+        <h2>Программы</h2>
+        <div class="programs__list-wrapper">
+          <ul class="programs__list">
+            <li><button class="programs__item programs__item--active programs__item--common" type="button">Общие</button></li>
+            <li><button class="programs__item programs__item--academic" type="button">Академические</button></li>
+            <li><button class="programs__item programs__item--internships" type="button">Стажировки</button></li>
+            <li><button class="programs__item programs__item--volunteering" type="button">Волонтёрство</button></li>
+            <li><button class="programs__item programs__item--religious" type="button">Религиозные</button></li>
+          </ul>
+          <ul class="programs__descriptions-list">
+            <li class="programs__descriptions-item programs__descriptions-item--active">
+              <h3>Общие</h3>
+              <p>Провести семестр или год за рубежом, знакомясь с различными культурами и&nbsp;идеями, традициями и&nbsp;стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это также академический центр, живая лаборатория идей и творческого исследования.</p>
+              <p>Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и&nbsp;делового администрирования или искусства? Здесь, в Израиле, Вы сможете&nbsp;изучить все это в удивительной университетской среде.</p>
+            </li>
+            <li class="programs__descriptions-item">
+              <h3>Академические</h3>
+              <p>Fusce id magna sagittis, molestie urna interdum, sodales nunc. Mauris laoreet efficitur dui vitae iaculis. Donec ullamcorper ligula quis risus convallis dapibus. Etiam eget scelerisque est. Cras sagittis ex nulla, quis ultrices odio vestibulum a. Maecenas interdum pharetra sapien, eget vehicula diam blandit non. Donec gravida auctor odio, nec facilisis dui rhoncus et. Maecenas tristique arcu et felis feugiat placerat. Maecenas interdum convallis velit. Integer laoreet convallis risus. Cras neque sapien, consequat ut pharetra et, molestie eget leo. Etiam in venenatis eros, et ultrices nunc. Morbi sem nisl, facilisis eu faucibus sit amet, luctus nec justo. Duis bibendum id lectus in vulputate. Maecenas eleifend lorem eget sem malesuada, in eleifend elit placerat. Praesent iaculis orci a justo ullamcorper, et porta neque lacinia. </p>
+            </li>
+            <li class="programs__descriptions-item">
+              <h3>Стажировки</h3>
+              <p>In elementum interdum dolor, vel placerat enim congue sit amet. Praesent quam lectus, imperdiet id cursus non, volutpat ut erat. Suspendisse libero turpis, porta non nisi sed, feugiat ullamcorper lectus. Donec dapibus auctor finibus. Fusce ut porta ipsum. Aliquam vehicula lacinia ante eget tincidunt. Donec non euismod lacus, ut malesuada ante. Ut a lorem a ante aliquet pharetra id vitae leo. Ut ornare, elit vitae tristique pellentesque, metus tellus fermentum neque, quis rhoncus metus lectus ac nisi. Vestibulum dapibus lectus mi. Duis vel pellentesque mauris. Ut ut urna placerat ex luctus bibendum suscipit quis nulla. </p>
+            </li>
+            <li class="programs__descriptions-item">
+              <h3>Волонтёрство</h3>
+              <p>Fusce rhoncus ligula ut ligula placerat, vel ornare nulla pretium. Mauris tristique, metus a porta pretium, mauris odio lacinia metus, nec eleifend quam elit id lacus. Fusce efficitur nulla nec nibh imperdiet, at suscipit lacus molestie. Fusce dictum est at justo pretium, vitae semper dolor iaculis. Aliquam sagittis velit velit, quis consectetur lacus scelerisque in. Phasellus ut ornare nulla, quis vehicula sem. Phasellus et lorem in tortor finibus tincidunt eleifend commodo sapien. </p>
+            </li>
+            <li class="programs__descriptions-item">
+              <h3>Религиозные</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur laoreet erat eu ligula iaculis, mollis volutpat turpis hendrerit. Sed vestibulum metus eget metus lobortis semper. Cras risus est, pretium at accumsan a, pharetra vitae risus. Nam egestas nulla vitae velit suscipit tincidunt. Quisque et erat molestie, vulputate ex eu, bibendum mauris. Integer at vulputate dui. Duis sollicitudin nisl tortor, ac congue mauris molestie sodales. </p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
   <div class="popup popup--close">

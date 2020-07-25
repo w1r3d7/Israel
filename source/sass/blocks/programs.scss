@@ -1,0 +1,205 @@
+.programs {
+  background-image: url("../img/programs-bg.png");
+  background-size: 680px 426px;
+  background-position: top right;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs-bg@2x.png");
+  }
+}
+
+.programs-wrapper {
+  box-sizing: border-box;
+  padding-left: 100px;
+  padding-right: 190px;
+}
+
+.programs h2 {
+  @include h2();
+
+  margin-bottom: 66px;
+}
+
+.programs__list {
+  @include ul-reset();
+  margin-right: 7%;
+  width: 27%;
+  flex-shrink: 0;
+}
+
+.programs__list li:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.programs__item {
+  position: relative;
+  display: block;
+  min-height: 68px;
+  width: 100%;
+  padding: 0;
+  padding-left: 72px;
+  box-sizing: border-box;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 20px;
+    width: 36px;
+    height: 36px;
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+  }
+}
+
+.programs__item:not(.programs__item--active) {
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+  }
+}
+
+.programs__item--common {
+  &::before {
+    background-image: url("../img/common-black.png");
+  }
+}
+
+.programs__item--active.programs__item--common {
+  &::before {
+    background-image: url("../img/common-white.png");
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/common-yellow.png");
+    }
+  }
+}
+
+.programs__item--academic {
+  &::before {
+    background-image: url("../img/academic-black.png");
+  }
+}
+
+.programs__item--active.programs__item--academic {
+  &::before {
+    background-image: url("../img/academic-white.png");
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/academic-yellow.png");
+    }
+  }
+}
+
+.programs__item--internships {
+  &::before {
+    background-image: url("../img/internships-black.png");
+  }
+}
+
+.programs__item--active.programs__item--internships {
+  &::before {
+    background-image: url("../img/internships-white.png");
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/internships-yellow.png");
+    }
+  }
+}
+
+.programs__item--volunteering {
+  &::before {
+    background-image: url("../img/volunteering-black.png");
+  }
+}
+
+.programs__item--active.programs__item--volunteering {
+  &::before {
+    background-image: url("../img/volunteering-white.png");
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/volunteering-yellow.png");
+    }
+  }
+}
+
+.programs__item--religious {
+  &::before {
+    background-image: url("../img/religious-black.png");
+  }
+}
+
+.programs__item--active.programs__item--religious {
+  &::before {
+    background-image: url("../img/religious-white.png");
+  }
+
+  &:hover {
+    &::before {
+      background-image: url("../img/religious-yellow.png");
+    }
+  }
+}
+
+.programs__item--active {
+  background-image: url("../img/arrow-end.svg"), $button;
+  background-repeat: no-repeat, repeat;
+  background-position: center right;
+
+  &:hover,
+  &:focus {
+    background-image: url("../img/arrow-end.svg"), $button-hover;
+  }
+
+  &:active {
+    background-image: url("../img/arrow-end.svg"), $button-active;
+  }
+}
+
+.programs__descriptions-list {
+  @include ul-reset();
+}
+
+.programs__list-wrapper {
+  display: flex;
+}
+
+.programs__descriptions-list h3 {
+  @include h3();
+
+  margin-bottom: 25px;
+}
+
+.programs__descriptions-list p {
+  @include text-regular-lh170();
+
+  margin: 0;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.programs__descriptions-item {
+  display: none;
+}
+
+.programs__descriptions-item--active {
+  display: block;
+  padding-top: 16px;
+}
