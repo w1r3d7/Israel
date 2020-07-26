@@ -10,4 +10,9 @@
 
 .page-main__programs {
   padding-top: 50px;
+  margin-bottom: 14px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
 }

@@ -1,0 +1,123 @@
+.want-to-go {
+  padding-top: 209px;
+  padding-bottom: 130px;
+
+  background-image: url("../img/backpack.png"), url("../img/girl-flag-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 147px, 818px;
+  background-position: left 135px, right top;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backpack@2x.png"), url("../img/girl-flag-bg@2x.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 50px;
+    padding-bottom: 305px;
+    background-position: left top, center bottom;
+    background-size: 104px, 130%;
+  }
+}
+
+.want-to-go__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  padding-left: 100px;
+  max-width: 577px;
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+
+.want-to-go h2 {
+  @include h2();
+
+  margin-bottom: 24px;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
+}
+
+.want-to-go p {
+  @include text-big-lh170();
+
+  margin: 0;
+  margin-bottom: 65px;
+  width: 83%;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
+
+.want-to-go form {
+  position: relative;
+}
+
+.want-to-go label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.want-to-go input {
+  height: 59px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: calc(100% - (216px + 40px));
+  box-sizing: border-box;
+  border: 2px solid $input-default;
+  border-radius: 80px;
+  outline: none;
+
+
+  &::placeholder {
+    font-size: 17px;
+    line-height: 55px;
+    font-weight: 500;
+    text-transform: lowercase;
+    font-variant: small-caps;
+    opacity: 0.5;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 8px;
+  }
+}
+
+.want-to-go__input-wrapper--valid input {
+  border-color: $input-valid;
+}
+
+.want-to-go__input-wrapper--invalid input {
+  border-color: $input-invalid;
+}
+
+.want-to-go button {
+  @include button();
+  width: 216px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    width: 264px;
+    margin: 0 auto;
+  }
+}

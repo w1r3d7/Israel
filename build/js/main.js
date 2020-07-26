@@ -17,27 +17,33 @@
     phoneEvent.target.value = phoneEvent.target.value.replace(/[^0-9+()-]/g, '');
   };
 
-  var checkInputValidity = function checkInputValidity(input) {
+  var checkInputValidity = function (input) {
+    var inputClass = input.parentElement.classList[0];
     var inputParent = input.parentElement;
 
-    if (!input.value) {
-      inputParent.classList.add('popup__input-wrapper--invalid');
-      inputParent.classList.remove('popup__input-wrapper--valid');
+    if (!inputClass) {
+      return;
+    }
+
+    if (input.value.length) {
+      inputParent.classList.remove(inputClass + '--invalid');
+      inputParent.classList.add(inputClass + '--valid');
     } else {
-      inputParent.classList.remove('popup__input-wrapper--invalid');
-      inputParent.classList.add('popup__input-wrapper--valid');
+      inputParent.classList.add(inputClass + '--invalid');
+      inputParent.classList.remove(inputClass + '--valid');
     }
   };
 
-  var checkCheckboxValidity = function checkCheckboxValidity(checkbox) {
+  var checkCheckboxValidity = function (checkbox) {
+    var checkboxClass = checkbox.parentElement.classList[0];
     var checkboxParent = checkbox.parentElement;
 
     if (checkbox.checked) {
-      checkboxParent.classList.add('popup__form-agreement-wrapper--valid');
-      checkboxParent.classList.remove('popup__form-agreement-wrapper--invalid');
+      checkboxParent.classList.add(checkboxClass + '--valid');
+      checkboxParent.classList.remove(checkboxClass + '--invalid');
     } else {
-      checkboxParent.classList.remove('popup__form-agreement-wrapper--valid');
-      checkboxParent.classList.add('popup__form-agreement-wrapper--invalid');
+      checkboxParent.classList.remove(checkboxClass + '--valid');
+      checkboxParent.classList.add(checkboxClass + '--invalid');
     }
   };
 
@@ -95,7 +101,6 @@
     openPopupButton.addEventListener('click', function () {
       openPopup();
     });
-
   }
 
   if (closePopupButtons) {
@@ -154,6 +159,37 @@
         closeAllPopups();
       }
       isClicked = false;
+    });
+  }
+
+  var openComplitePopupAlone = function () {
+    popup.classList.remove('popup--close');
+    body.classList.add('scroll-lock');
+    document.addEventListener('keydown', onEscapePress);
+    orderComplitePopup.classList.remove('popup__wrapper--close');
+  };
+
+  var wantToGoForm = document.querySelector('.want-to-go form');
+  var wantToGoInput = wantToGoForm.querySelector('input');
+
+  if (wantToGoForm) {
+    wantToGoInput.addEventListener('input', function (evt) {
+      inputPhoneValidate(evt);
+      checkInputValidity(evt.target);
+    });
+
+    wantToGoForm.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+
+      var isInputValid = wantToGoInput.parentElement.classList.contains('want-to-go__input-wrapper--valid');
+
+      if (isInputValid) {
+        openComplitePopupAlone();
+        wantToGoForm.reset();
+        wantToGoInput.parentElement.classList.remove('want-to-go__input-wrapper--valid');
+      } else {
+        checkInputValidity(wantToGoInput);
+      }
     });
   }
 })();
