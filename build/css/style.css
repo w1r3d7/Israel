@@ -1004,6 +1004,11 @@ input[type="radio"].visually-hidden {
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .programs {
       background-image: url("../img/programs-bg@2x.png"); } }
+  @media (max-width: 1023px) {
+    .programs {
+      background-size: 100%;
+      background-position: 23px 165px;
+      background-repeat: no-repeat; } }
 
 .programs-wrapper {
   -webkit-box-sizing: border-box;
@@ -1108,50 +1113,50 @@ input[type="radio"].visually-hidden {
 .programs__item--common::before {
   background-image: url("../img/common-black.png"); }
 
+.programs__item--common:hover::before {
+  background-image: url("../img/common-yellow.png"); }
+
 .programs__item--active.programs__item--common::before {
   background-image: url("../img/common-white.png"); }
-
-.programs__item--active.programs__item--common:hover::before {
-  background-image: url("../img/common-yellow.png"); }
 
 .programs__item--academic::before {
   background-image: url("../img/academic-black.png"); }
 
+.programs__item--academic:hover::before {
+  background-image: url("../img/academic-yellow.png"); }
+
 .programs__item--active.programs__item--academic::before {
   background-image: url("../img/academic-white.png"); }
-
-.programs__item--active.programs__item--academic:hover::before {
-  background-image: url("../img/academic-yellow.png"); }
 
 .programs__item--internships::before {
   background-image: url("../img/internships-black.png"); }
 
+.programs__item--internships:hover::before {
+  background-image: url("../img/internships-yellow.png"); }
+
 .programs__item--active.programs__item--internships::before {
   background-image: url("../img/internships-white.png"); }
-
-.programs__item--active.programs__item--internships:hover::before {
-  background-image: url("../img/internships-yellow.png"); }
 
 .programs__item--volunteering::before {
   background-image: url("../img/volunteering-black.png"); }
 
+.programs__item--volunteering:hover::before {
+  background-image: url("../img/volunteering-yellow.png"); }
+
 .programs__item--active.programs__item--volunteering::before {
   background-image: url("../img/volunteering-white.png"); }
-
-.programs__item--active.programs__item--volunteering:hover::before {
-  background-image: url("../img/volunteering-yellow.png"); }
 
 .programs__item--religious::before {
   background-image: url("../img/religious-black.png"); }
 
+.programs__item--religious:hover::before {
+  background-image: url("../img/religious-yellow.png"); }
+
 .programs__item--active.programs__item--religious::before {
   background-image: url("../img/religious-white.png"); }
 
-.programs__item--active.programs__item--religious:hover::before {
-  background-image: url("../img/religious-yellow.png"); }
-
 .programs__item--active {
-  background-image: url("../img/arrow-end.svg"), linear-gradient(142.39deg, #ffc341 20.46%, #ffd701 65.31%);
+  background-image: url("../img/arrow-end.svg"), linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
   background-repeat: no-repeat, repeat;
   background-position: center right;
   font-size: 16px;
@@ -1161,10 +1166,6 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
   opacity: 1; }
-  .programs__item--active:hover, .programs__item--active:focus {
-    background-image: url("../img/arrow-end.svg"), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%); }
-  .programs__item--active:active {
-    background-image: url("../img/arrow-end.svg"), radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%); }
   @media (max-width: 1023px) {
     .programs__item--active {
       padding-right: 12px;
