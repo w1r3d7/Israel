@@ -4,7 +4,7 @@
 
   background-image: url("../img/backpack.png"), url("../img/girl-flag-bg.jpg");
   background-repeat: no-repeat;
-  background-size: 147px, 818px;
+  background-size: 11%, 60%;
   background-position: left 135px, right top;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -15,7 +15,7 @@
     padding-top: 50px;
     padding-bottom: 305px;
     background-position: left top, center bottom;
-    background-size: 104px, 130%;
+    background-size: 104px, 320px;
   }
 }
 
@@ -24,12 +24,17 @@
   flex-direction: column;
   justify-content: flex-start;
 
-  padding-left: 100px;
+  padding-left: 8.7%;
   max-width: 577px;
   box-sizing: border-box;
 
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+  }
+
   @media (max-width: $mobile-width) {
     width: 100%;
+    max-width: unset;
     padding-left: 0;
   }
 }
