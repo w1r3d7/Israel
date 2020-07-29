@@ -3,7 +3,7 @@
   background-image: url("../img/masa-israel-bg.png");
   background-repeat: no-repeat;
   background-size: 1366px;
-  background-position: right center;
+  background-position: center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/masa-israel-bg@2x.png");
@@ -35,8 +35,12 @@
 
   margin-bottom: 24px;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 94px;
+  }
+
+  @media (max-width: $mobile-width) {
+
     font-size: 40px;
     line-height: 49px;
   }

@@ -2445,7 +2445,7 @@ button.swiper-pagination-bullet {
   background-image: url("../img/masa-israel-bg.png");
   background-repeat: no-repeat;
   background-size: 1366px;
-  background-position: right center; }
+  background-position: center; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .masa-israel {
       background-image: url("../img/masa-israel-bg@2x.png"); } }
@@ -2480,9 +2480,11 @@ button.swiper-pagination-bullet {
     .masa-israel h2 {
       font-size: 32px;
       line-height: 39px; } }
+  @media (max-width: 1023px) {
+    .masa-israel h2 {
+      margin-bottom: 94px; } }
   @media (max-width: 767px) {
     .masa-israel h2 {
-      margin-bottom: 94px;
       font-size: 40px;
       line-height: 49px; } }
 
