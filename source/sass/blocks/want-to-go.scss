@@ -15,7 +15,7 @@
     padding-top: 50px;
     padding-bottom: 305px;
     background-position: left top, center bottom;
-    background-size: 104px, 320px;
+    background-size: 104px, 420px;
   }
 }
 
@@ -34,7 +34,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    max-width: unset;
+    max-width: none;
     padding-left: 0;
   }
 }
@@ -58,6 +58,7 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    max-width: unset;
     margin-bottom: 25px;
   }
 }
@@ -81,7 +82,7 @@
 
 .want-to-go input {
   height: 59px;
-  max-width: 100%;
+  width: 100%;
   padding-left: 40px;
   padding-right: calc(100% - (216px + 40px));
   box-sizing: border-box;

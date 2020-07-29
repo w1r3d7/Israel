@@ -1657,6 +1657,7 @@ button.swiper-pagination-bullet {
           flex-wrap: nowrap;
       width: 100%;
       margin-right: 0;
+      overflow: hidden;
       overflow-x: auto; } }
 
 @media (max-width: 1023px) {
@@ -1858,7 +1859,7 @@ button.swiper-pagination-bullet {
       padding-top: 50px;
       padding-bottom: 305px;
       background-position: left top, center bottom;
-      background-size: 104px, 320px; } }
+      background-size: 104px, 420px; } }
 
 .want-to-go__wrapper {
   display: -webkit-box;
@@ -1881,7 +1882,7 @@ button.swiper-pagination-bullet {
   @media (max-width: 767px) {
     .want-to-go__wrapper {
       width: 100%;
-      max-width: unset;
+      max-width: none;
       padding-left: 0; } }
 
 .want-to-go h2 {
@@ -1917,6 +1918,7 @@ button.swiper-pagination-bullet {
   @media (max-width: 767px) {
     .want-to-go p {
       width: 100%;
+      max-width: unset;
       margin-bottom: 25px; } }
 
 .want-to-go form {
@@ -1937,7 +1939,7 @@ button.swiper-pagination-bullet {
 
 .want-to-go input {
   height: 59px;
-  max-width: 100%;
+  width: 100%;
   padding-left: 40px;
   padding-right: calc(100% - (216px + 40px));
   -webkit-box-sizing: border-box;
@@ -2459,7 +2461,7 @@ button.swiper-pagination-bullet {
     .masa-israel {
       min-height: unset;
       background-size: 200%;
-      background-position: 23% 23%; } }
+      background-position: 23% 48%; } }
 
 .masa-israel__wrapper {
   padding-top: 11%;
