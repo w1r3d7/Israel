@@ -1,42 +1,15 @@
-(function() {
-
-  'use strict';
-
-  // breakpoint where swiper will be destroyed
-  // and switches to a dual-column layout
-  var breakpoint = window.matchMedia( '(min-width:767px)' );
-
-  // keep track of swiper instances to destroy later
+'use strict';
+(function () {
+  var breakpoint = window.matchMedia('(min-width:767px)');
   var mySwiper;
-
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-
-  var breakpointChecker = function() {
-
-    // if larger viewport and multi-row layout needed
-    if( breakpoint.matches === true ) {
-
-      // clean up old instances and inline styles when available
-      if(mySwiper !== undefined) mySwiper.destroy( true, true );
-
-      // or/and do nothing
+  var breakpointChecker = function () {
+    if (breakpoint.matches === true) {
+      if (mySwiper !== undefined) mySwiper.destroy(true, true);
       return;
-
-      // else if a small viewport and single column layout needed
-    } else if ( breakpoint.matches === false ) {
-
-      // fire small viewport version of swiper
+    } else if (breakpoint.matches === false) {
       return enableSwiper();
-
     }
-
   };
-
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
 
   var enableSwiper = function() {
       mySwiper = new Swiper('.swiper-container', {
@@ -45,36 +18,22 @@
         el: '.swiper-pagination',
       }
     });
-    // mySwiper = new Swiper ('.swiper-container', {
-    //
-    //   loop: true,
-    //
-    //   slidesPerView: 'auto',
-    //
-    //   centeredSlides: true,
-    //
-    //   a11y: true,
-    //   keyboardControl: true,
-    //   grabCursor: true,
-    //
-    //   // pagination
-    //   pagination: '.swiper-pagination',
-    //   paginationClickable: true,
-    //
-    // });
-
   };
-
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-  //////////////////////////////////////////////////////////////////
-
-  // keep an eye on viewport size changes
   breakpoint.addListener(breakpointChecker);
-
-  // kickstart
   breakpointChecker();
 
 
+})();
 
-})(); /* IIFE end */
+(function () {
+  var swiper = new Swiper('.swiper-reviews-container', {
+    pagination: {
+      el: '.swiper-reviews-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper-reviews-button-next',
+      prevEl: '.swiper-reviews-button-prev',
+    },
+  });
+})();

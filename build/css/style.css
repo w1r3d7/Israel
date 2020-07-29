@@ -2557,7 +2557,7 @@ button.swiper-pagination-bullet {
       left: 57px; } }
 
 .questions {
-  padding-bottom: 100px;
+  padding-bottom: 130px;
   background-image: url("../img/questions-bg.png"), url("../img/bag.png"), url("../img/questions-bg-watercolor.png");
   background-repeat: no-repeat;
   background-position: right top, left bottom, center 37%;
@@ -2694,3 +2694,34 @@ button.swiper-pagination-bullet {
   @media (max-width: 767px) {
     .questions__item--active .questions__item-wrapper {
       margin-bottom: 15px; } }
+
+.reviews h2 {
+  margin: 0;
+  font-family: "Montserrat", "Verdana", sans-serif;
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1fc0fc;
+  text-transform: uppercase;
+  text-align: center; }
+  @media (max-width: 767px) {
+    .reviews h2 {
+      font-size: 32px;
+      line-height: 39px; } }
+
+.reviews__list {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.reviews__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.reviews__item-wrapper {
+  width: 59%; }

@@ -1,0 +1,22 @@
+.reviews {
+
+}
+
+.reviews h2 {
+  @include h2();
+
+  text-align: center;
+}
+
+.reviews__list {
+  @include ul-reset();
+}
+
+.reviews__item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__item-wrapper {
+  width: 59%;
+}
