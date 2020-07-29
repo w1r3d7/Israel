@@ -32,3 +32,11 @@
     margin-bottom: 10px;
   }
 }
+
+.page-main__masa-israel {
+  margin-bottom: 141px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 80px;
+  }
+}

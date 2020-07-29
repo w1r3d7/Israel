@@ -10,6 +10,7 @@
   }
 
   @media (max-width: $mobile-width) {
+    min-height: unset;
     background-size: 200%;
     background-position: 23% 23%;
   }
