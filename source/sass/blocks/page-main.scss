@@ -24,3 +24,11 @@
     margin-bottom: 78px;
   }
 }
+
+.page-main__life-in {
+  margin-bottom: 96px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+  }
+}

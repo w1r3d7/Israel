@@ -1585,6 +1585,12 @@ button.swiper-pagination-bullet {
     .page-main__how-to-go {
       margin-bottom: 78px; } }
 
+.page-main__life-in {
+  margin-bottom: 96px; }
+  @media (max-width: 767px) {
+    .page-main__life-in {
+      margin-bottom: 10px; } }
+
 .programs {
   background-image: url("../img/programs-bg.png");
   background-size: 680px 426px;
@@ -2425,3 +2431,116 @@ button.swiper-pagination-bullet {
   height: 8px;
   background-image: linear-gradient(108.42deg, #ffc341 20.46%, #ffd701 65.31%);
   opacity: 1; }
+
+.life-in__pagination {
+  display: none; }
+  @media (max-width: 767px) {
+    .life-in__pagination {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.masa-israel {
+  min-height: 583px;
+  background-image: url("../img/masa-israel-bg.png");
+  background-repeat: no-repeat;
+  background-size: 1366px;
+  background-position: right center; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .masa-israel {
+      background-image: url("../img/masa-israel-bg@2x.png"); } }
+  @media (max-width: 767px) {
+    .masa-israel {
+      background-size: 200%;
+      background-position: 23% 23%; } }
+
+.masa-israel__wrapper {
+  padding-top: 11%;
+  padding-left: 60%;
+  width: 35%; }
+  @media (max-width: 1023px) {
+    .masa-israel__wrapper {
+      padding-left: 50%; } }
+  @media (max-width: 767px) {
+    .masa-israel__wrapper {
+      padding-left: 0;
+      width: 100%; } }
+
+.masa-israel h2 {
+  margin: 0;
+  font-family: "Montserrat", "Verdana", sans-serif;
+  font-size: 40px;
+  line-height: 49px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #1fc0fc;
+  text-transform: uppercase;
+  margin-bottom: 24px; }
+  @media (max-width: 767px) {
+    .masa-israel h2 {
+      font-size: 32px;
+      line-height: 39px; } }
+  @media (max-width: 767px) {
+    .masa-israel h2 {
+      margin-bottom: 94px;
+      font-size: 40px;
+      line-height: 49px; } }
+
+.masa-israel p {
+  font-family: "Fira Sans", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 170%;
+  color: #484848;
+  padding-left: 4px;
+  margin: 0;
+  margin-bottom: 48px;
+  color: #ffffff; }
+  @media (max-width: 767px) {
+    .masa-israel p {
+      font-size: 16px;
+      line-height: 160%; } }
+  @media (max-width: 767px) {
+    .masa-israel p {
+      padding-left: 7px;
+      margin-bottom: 59px; } }
+
+.masa-israel button {
+  display: block;
+  padding: 0;
+  width: 264px;
+  min-height: 59px;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+  background-image: linear-gradient(142.39deg, #ffc341 20.46%, #ffd701 65.31%);
+  border-radius: 80px;
+  border: none;
+  text-transform: lowercase;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding-left: 32px;
+  width: 230px; }
+  .masa-israel button:hover, .masa-israel button:focus {
+    background-image: linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%); }
+  .masa-israel button:active {
+    background-image: radial-gradient(150% 119.49% at 50% 50.85%, rgba(0, 0, 0, 0) 30.67%, rgba(3, 3, 3, 0.24) 100%), linear-gradient(143.55deg, #ffc341 -50.3%, #ffd701 63.1%); }
+  @media (max-width: 767px) {
+    .masa-israel button {
+      width: 264px;
+      margin: 0 auto; } }
+
+.masa-israel__wrapper svg {
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  fill: #ffffff; }
+  @media (max-width: 767px) {
+    .masa-israel__wrapper svg {
+      left: 57px; } }

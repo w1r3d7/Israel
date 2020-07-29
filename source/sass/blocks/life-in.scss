@@ -214,3 +214,11 @@
   background-image: $gradient-yellow;
   opacity: 1;
 }
+
+.life-in__pagination {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+  }
+}
