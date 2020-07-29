@@ -1,3 +1,20 @@
+.life-in {
+  padding-bottom: 32px;
+  background-image: url("../img/compass.png"), url("../img/life-in-bg.png");
+  background-repeat: no-repeat;
+  background-position: right 80%, bottom;
+  background-size: 90px, 1366px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/compass@2x.png"), url("../img/life-in-bg@2x.png");
+  }
+
+
+  @media (max-width: $mobile-width) {
+    background-image: none;
+  }
+}
+
 .life-in h2 {
   @include h2();
 
@@ -104,20 +121,27 @@
   }
 }
 
+.life-in__image--main img {
+  @media (max-width: $mobile-width) {
+    width: 264px;
+  }
+}
+
 .life-in__image--main h4 {
-  left: 35px;
+  left: 39px;
   max-width: 320px;
-  bottom: 28px;
+  bottom: -6px;
 
   @media (max-width: $mobile-width) {
     left: 50%;
     transform: translateX(-50%);
     max-width: none;
+    bottom: 30px;
   }
 }
 
 .life-in__image--tight {
-  max-width: 32%;
+  max-width: 33%;
 
   @media (max-width: $mobile-width) {
     max-width: none;

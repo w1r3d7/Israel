@@ -945,6 +945,12 @@ button.swiper-pagination-bullet {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
+.swiper-container {
+  overflow: visible; }
+  @media (max-width: 767px) {
+    .swiper-container {
+      overflow: hidden; } }
+
 .swiper-pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1669,7 +1675,8 @@ button.swiper-pagination-bullet {
   cursor: pointer;
   font-size: 15px;
   line-height: 18px;
-  opacity: 0.87; }
+  opacity: 0.87;
+  outline: none; }
   .programs__item::before {
     position: absolute;
     content: "";
@@ -2180,6 +2187,19 @@ button.swiper-pagination-bullet {
       .how-to-go__footnote p::before {
         left: -6px; } }
 
+.life-in {
+  padding-bottom: 32px;
+  background-image: url("../img/compass.png"), url("../img/life-in-bg.png");
+  background-repeat: no-repeat;
+  background-position: right 80%, bottom;
+  background-size: 90px, 1366px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .life-in {
+      background-image: url("../img/compass@2x.png"), url("../img/life-in-bg@2x.png"); } }
+  @media (max-width: 767px) {
+    .life-in {
+      background-image: none; } }
+
 .life-in h2 {
   margin: 0;
   font-family: "Montserrat", "Verdana", sans-serif;
@@ -2319,19 +2339,24 @@ button.swiper-pagination-bullet {
       left: 0;
       top: 0; } }
 
+@media (max-width: 767px) {
+  .life-in__image--main img {
+    width: 264px; } }
+
 .life-in__image--main h4 {
-  left: 35px;
+  left: 39px;
   max-width: 320px;
-  bottom: 28px; }
+  bottom: -6px; }
   @media (max-width: 767px) {
     .life-in__image--main h4 {
       left: 50%;
       -webkit-transform: translateX(-50%);
               transform: translateX(-50%);
-      max-width: none; } }
+      max-width: none;
+      bottom: 30px; } }
 
 .life-in__image--tight {
-  max-width: 32%; }
+  max-width: 33%; }
   @media (max-width: 767px) {
     .life-in__image--tight {
       max-width: none;
