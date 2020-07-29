@@ -1872,7 +1872,7 @@ button.swiper-pagination-bullet {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding-left: 8.7%;
-  max-width: 577px;
+  max-width: 50.7%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
   @media (max-width: 1023px) {
@@ -1909,7 +1909,7 @@ button.swiper-pagination-bullet {
   color: #484848;
   margin: 0;
   margin-bottom: 65px;
-  width: 83%; }
+  max-width: 80%; }
   @media (max-width: 767px) {
     .want-to-go p {
       font-size: 16px;

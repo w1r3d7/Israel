@@ -25,7 +25,7 @@
   justify-content: flex-start;
 
   padding-left: 8.7%;
-  max-width: 577px;
+  max-width: 50.7%;
   box-sizing: border-box;
 
   @media (max-width: $tablet-width) {
@@ -54,7 +54,7 @@
 
   margin: 0;
   margin-bottom: 65px;
-  width: 83%;
+  max-width: 80%;
 
   @media (max-width: $mobile-width) {
     width: 100%;
