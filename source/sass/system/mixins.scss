@@ -19,6 +19,21 @@
   }
 }
 
+@mixin h4() {
+  margin: 0;
+  font-family: $lower-heading-font;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 25px;
+  color: $color-white;
+  text-shadow: $shadow-text;
+
+  @media (max-width: $mobile-width) {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
 @mixin h2() {
   margin: 0;
   font-family: $heading-font;

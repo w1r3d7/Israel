@@ -1,0 +1,192 @@
+.life-in h2 {
+  @include h2();
+
+  margin-bottom: 23px;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.life-in p {
+  @include text-big-lh170();
+
+  position: relative;
+  width: 63%;
+  margin: 0 auto;
+  margin-bottom: 46px;
+  padding-right: 12px;
+  text-align: right;
+  z-index: 2;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-bottom: 26px;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.life-in__images {
+  @include ul-reset();
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding-left: 43%;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    flex-wrap: nowrap;
+    margin-bottom: 27px;
+  }
+}
+
+.life-in__image {
+  position: relative;
+  margin-bottom: 24px;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-shrink: 0;
+    width: 100%;
+  }
+}
+
+.life-in__image img {
+  @media (max-width: $mobile-width) {
+    width: 288px;
+    object-fit: cover;
+    object-position: right;
+    font-family: "object-fit: cover; object-position: right;";
+    height: 400px;
+  }
+}
+
+.life-in__image h4 {
+  @include h4();
+
+  position: absolute;
+  bottom: 37px;
+
+  @media (max-width: $mobile-width) {
+    width: 256px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+}
+
+.life-in__image--main {
+  width: 43%;
+  position: absolute;
+  left: -0.5%;
+  top: -66px;
+
+  @media (max-width: $mobile-width) {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.life-in__image--main h4 {
+  left: 35px;
+  max-width: 320px;
+  bottom: 28px;
+
+  @media (max-width: $mobile-width) {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none;
+  }
+}
+
+.life-in__image--tight {
+  max-width: 32%;
+
+  @media (max-width: $mobile-width) {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.life-in__image--wide {
+  max-width: 63%;
+
+  @media (max-width: $mobile-width) {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.life-in__image--tight h4 {
+  left: 24px;
+  max-width: 120px;
+
+  @media (max-width: $mobile-width) {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none;
+    bottom: 28px;
+  }
+}
+
+.life-in__image--wide h4 {
+  left: 32px;
+  max-width: 90%;
+
+  @media (max-width: $mobile-width) {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: none;
+    bottom: 28px;
+  }
+}
+
+.life-in__slider-buttons {
+  @include ul-reset();
+
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.life-in__slider-button {
+  width: 6px;
+  height: 6px;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  background-color: $color-black;
+  opacity: 0.2;
+}
+
+.life-in__slider-buttons li:not(:last-child) {
+  margin-right: 8px;
+}
+
+.life-in__slider-button--active {
+  width: 8px;
+  height: 8px;
+  background-image: $gradient-yellow;
+  opacity: 1;
+}

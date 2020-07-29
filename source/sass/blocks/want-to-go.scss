@@ -81,7 +81,7 @@
 
 .want-to-go input {
   height: 59px;
-  width: 100%;
+  max-width: 100%;
   padding-left: 40px;
   padding-right: calc(100% - (216px + 40px));
   box-sizing: border-box;

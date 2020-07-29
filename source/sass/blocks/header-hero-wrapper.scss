@@ -10,7 +10,7 @@
     background-image: url("../img/bg-hero-desktop@2x.jpg");
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     padding-bottom: 85px;
     background-image: url("../img/bg-hero-mobile.jpg");
     background-size: 912px 605px;
@@ -24,6 +24,10 @@
 
 .header-hero-wrapper__header {
   margin-bottom: 460px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 260px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 274px;

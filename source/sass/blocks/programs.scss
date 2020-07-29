@@ -97,6 +97,7 @@
   @media (max-width: $tablet-width) {
     min-height: 48px;
     padding-left: 52px;
+    padding-right: 12px;
 
     &::before {
       left: 14px;
@@ -218,7 +219,7 @@
   opacity: 1;
 
   @media (max-width: $tablet-width) {
-    padding-right: 12px;
+
     background-image: $button;
     background-repeat: repeat;
     background-position: unset;
