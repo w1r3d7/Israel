@@ -41,3 +41,33 @@
   background-image: $gradient-yellow;
   opacity: 1;
 }
+
+.swiper-reviews-button-prev {
+  width: 11px;
+  height: 18px;
+  margin-right: 15px;
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.swiper-reviews-button-next {
+  width: 11px;
+  height: 18px;
+  transform: rotate(180deg);
+  opacity: 0.2;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.swiper-reviews-pagination {
+  font-size: 17px;
+  line-height: 150%;
+  opacity: 0.5;
+}
