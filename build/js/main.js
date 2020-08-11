@@ -213,6 +213,39 @@
       }
     });
   }
+
+  var detailsForm = document.querySelector('.details__form');
+  var detailsFormInputs = detailsForm.querySelectorAll('input');
+
+
+  if (detailsForm) {
+    detailsFormInputs[0].addEventListener('input', function (evt) {
+      checkInputValidity(evt.target);
+    });
+
+    detailsFormInputs[1].addEventListener('input', function (evt) {
+      inputPhoneValidate(evt);
+      checkInputValidity(evt.target);
+    });
+
+    detailsForm.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+
+      var isInputValid = detailsFormInputs[0].parentElement.classList.contains('details__form-input-wrapper--valid') && detailsFormInputs[1].parentElement.classList.contains('details__form-input-wrapper--valid');
+
+      if (isInputValid) {
+        openComplitePopupAlone();
+        detailsForm.reset();
+        detailsFormInputs.forEach(function (it) {
+          it.parentElement.classList.remove('details__form-input-wrapper--valid');
+        });
+      } else {
+        checkInputValidity(detailsFormInputs[0]);
+        checkInputValidity(detailsFormInputs[1]);
+      }
+    });
+  }
+
 })();
 
 'use strict';

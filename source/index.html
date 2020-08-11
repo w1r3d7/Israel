@@ -545,6 +545,85 @@
           </ul>
       </div>
     </section>
+    <section class="page-main__details details">
+      <div class="details__wrapper">
+        <div class="details__description">
+          <h2>Узнать подробности</h2>
+          <div class="details__description-city">
+            <p>Ваш город:
+              <span>Новосибирск</span>
+              <button type="button" aria-label="Поиск вашего города">
+                <picture>
+                  <source srcset="img/gps.webp 1x, img/gps@2x.webp 2x" type="image/webp">
+                    <!-- 1х: 16px; 2x: 32px -->
+                  <img src="img/gps.png" alt="Поиск города" srcset="img/gps@2x.png 2x" width="16" height="15">
+                </picture>
+              </button></p>
+          </div>
+          <div class="details__description-curator">
+            <picture>
+              <source srcset="img/curator.webp 1x, img/curator@2x.webp 2x" type="image/webp">
+                <!-- 1х: 112px; 2x: 224px -->
+              <img src="img/curator.png" alt="Фотография куратора" srcset="img/curator@2x.png 2x" width="112" height="112">
+            </picture>
+            <div class="details__description-curator-info">
+              <p><span>Ваш куратор:</span>Анна Горелик</p>
+              <address>Новосибирск, ул. Щетинкина 68, культурный центр «Бейт Менахем»</address>
+              <ul>
+                <li>
+                  <a href="#">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <svg width="24" height="24">
+                      <use xlink:href="#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="details__description-curator-text">Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте&nbsp;подробнее о программах и выберите свою !</p>
+        </div>
+        <div class="details__map">
+          <picture>
+            <source srcset="img/map.webp 1x, img/map@2x.webp 2x" type="image/webp">
+              <!-- 1х: 702px; 2x: 1404px -->
+            <img src="img/map.png" alt="Поиск города" srcset="img/map@2x.png 2x" width="702" height="448">
+          </picture>
+        </div>
+      </div>
+      <div class="details__callback">
+        <div class="details__callback-text">
+          <p>Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
+        </div>
+        <div class="details__form">
+          <form>
+            <label for="callback-name">Ваше имя</label>
+            <div class="details__form-input-wrapper">
+              <input id="callback-name" type="text" name="callback-name" placeholder="Имя">
+            </div>
+            <label for="callback-phone">Ваш телефон</label>
+            <div class="details__form-input-wrapper">
+              <input type="tel" name="callback-phone" id="callback-phone" placeholder="Телефон">
+            </div>
+            <button type="submit">Перезвоните мне</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
   <div class="popup popup--close">
     <div class="popup__wrapper popup__wrapper--order popup__wrapper--close">

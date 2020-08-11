@@ -1,13 +1,19 @@
 .reviews {
   max-width: 1366px;
   margin: 0 auto;
+  margin-bottom: 105px;
 
   background-image: url("../img/reviews-bg.png");
   background-repeat: no-repeat;
   background-position: right 24%;
+  background-size: 523px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/reviews-bg@2x.png");
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 80px;
   }
 
   @media (max-width: $mobile-width) {

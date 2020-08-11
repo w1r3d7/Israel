@@ -100,6 +100,10 @@
     opacity: 0.5;
   }
 
+  &:focus {
+    border-color: $input-focus;
+  }
+
   @media (max-width: $mobile-width) {
     margin-bottom: 8px;
   }
