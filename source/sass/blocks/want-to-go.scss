@@ -1,15 +1,25 @@
-.want-to-go {
-  padding-top: 209px;
-  padding-bottom: 130px;
+.webp .want-to-go {
+  background-image: url("../img/backpack.webp"), url("../img/girl-flag-bg.webp");
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/backpack@2x.webp"), url("../img/girl-flag-bg@2x.webp");
+  }
+}
+
+.no-webp .want-to-go {
   background-image: url("../img/backpack.png"), url("../img/girl-flag-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: 11%, 60%;
-  background-position: left 135px, right top;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/backpack@2x.png"), url("../img/girl-flag-bg@2x.jpg");
   }
+}
+
+.want-to-go {
+  padding-top: 209px;
+  padding-bottom: 130px;
+  background-repeat: no-repeat;
+  background-size: 11%, 60%;
+  background-position: left 135px, right top;
 
   @media (max-width: $mobile-width) {
     padding-top: 50px;

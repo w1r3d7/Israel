@@ -1078,28 +1078,44 @@ button.swiper-pagination-bullet {
       font-size: 14px;
       line-height: 17px; } }
 
+.webp .header-hero-wrapper {
+  background-image: url("../img/bg-hero-desktop.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .header-hero-wrapper {
+      background-image: url("../img/bg-hero-desktop@2x.webp"); } }
+  @media (max-width: 1023px) {
+    .webp .header-hero-wrapper {
+      background-image: url("../img/bg-hero-mobile.webp"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .webp .header-hero-wrapper {
+      background-image: url("../img/bg-hero-mobile@2x.webp"); } }
+
+.no-webp .header-hero-wrapper {
+  background-image: url("../img/bg-hero-desktop.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .header-hero-wrapper {
+      background-image: url("../img/bg-hero-desktop@2x.jpg"); } }
+  @media (max-width: 1023px) {
+    .no-webp .header-hero-wrapper {
+      background-image: url("../img/bg-hero-mobile.jpg"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .no-webp .header-hero-wrapper {
+      background-image: url("../img/bg-hero-mobile@2x.jpg"); } }
+
 .header-hero-wrapper {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   padding-bottom: 140px;
-  background-image: url("../img/bg-hero-desktop.jpg");
   background-repeat: no-repeat;
   background-size: 1366px 906px;
   background-position: center top;
   background-color: #ffffff; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .header-hero-wrapper {
-      background-image: url("../img/bg-hero-desktop@2x.jpg"); } }
   @media (max-width: 1023px) {
     .header-hero-wrapper {
       padding-bottom: 85px;
-      background-image: url("../img/bg-hero-mobile.jpg");
       background-size: 912px 605px;
       background-position: center 32px; } }
-  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-    .header-hero-wrapper {
-      background-image: url("../img/bg-hero-mobile@2x.jpg"); } }
 
 .header-hero-wrapper__header {
   margin-bottom: 460px; }
@@ -1638,14 +1654,22 @@ button.swiper-pagination-bullet {
     .page-main__masa-israel {
       margin-bottom: 80px; } }
 
+.webp .programs {
+  background-image: url("../img/programs-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .programs {
+      background-image: url("../img/programs-bg@2x.webp"); } }
+
+.no-webp .programs {
+  background-image: url("../img/programs-bg.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .programs {
+      background-image: url("../img/programs-bg@2x.png"); } }
+
 .programs {
-  background-image: url("../img/programs-bg.png");
   background-size: 680px 426px;
   background-position: top right;
   background-repeat: no-repeat; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .programs {
-      background-image: url("../img/programs-bg@2x.png"); } }
   @media (max-width: 1023px) {
     .programs {
       background-size: 100%;
@@ -1761,12 +1785,21 @@ button.swiper-pagination-bullet {
 
 .programs__item--common::before {
   background-image: url("../img/common-black.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--common::before {
+      background-image: url("../img/common-black@2x.png"); } }
 
 .programs__item--common:hover::before {
   background-image: url("../img/common-yellow.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--common:hover::before {
+      background-image: url("../img/common-yellow@2x.png"); } }
 
 .programs__item--active.programs__item--common::before {
   background-image: url("../img/common-white.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--common::before {
+      background-image: url("../img/common-white@2x.png"); } }
 
 @media (max-width: 1023px) {
   .programs__item--academic {
@@ -1774,12 +1807,21 @@ button.swiper-pagination-bullet {
 
 .programs__item--academic::before {
   background-image: url("../img/academic-black.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--academic::before {
+      background-image: url("../img/academic-black@2x.png"); } }
 
 .programs__item--academic:hover::before {
   background-image: url("../img/academic-yellow.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--academic:hover::before {
+      background-image: url("../img/academic-yellow@2x.png"); } }
 
 .programs__item--active.programs__item--academic::before {
   background-image: url("../img/academic-white.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--academic::before {
+      background-image: url("../img/academic-white@2x.png"); } }
 
 @media (max-width: 1023px) {
   .programs__item--internships {
@@ -1787,12 +1829,21 @@ button.swiper-pagination-bullet {
 
 .programs__item--internships::before {
   background-image: url("../img/internships-black.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--internships::before {
+      background-image: url("../img/internships-black@2x.png"); } }
 
 .programs__item--internships:hover::before {
   background-image: url("../img/internships-yellow.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--internships:hover::before {
+      background-image: url("../img/internships-yellow@2x.png"); } }
 
 .programs__item--active.programs__item--internships::before {
   background-image: url("../img/internships-white.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--internships::before {
+      background-image: url("../img/internships-white@2x.png"); } }
 
 @media (max-width: 1023px) {
   .programs__item--volunteering {
@@ -1800,12 +1851,21 @@ button.swiper-pagination-bullet {
 
 .programs__item--volunteering::before {
   background-image: url("../img/volunteering-black.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--volunteering::before {
+      background-image: url("../img/volunteering-black@2x.png"); } }
 
 .programs__item--volunteering:hover::before {
   background-image: url("../img/volunteering-yellow.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--volunteering:hover::before {
+      background-image: url("../img/volunteering-yellow@2x.png"); } }
 
 .programs__item--active.programs__item--volunteering::before {
   background-image: url("../img/volunteering-white.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--volunteering::before {
+      background-image: url("../img/volunteering-white@2x.png"); } }
 
 @media (max-width: 1023px) {
   .programs__item--religious {
@@ -1813,12 +1873,21 @@ button.swiper-pagination-bullet {
 
 .programs__item--religious::before {
   background-image: url("../img/religious-black.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--religious::before {
+      background-image: url("../img/religious-black@2x.png"); } }
 
 .programs__item--religious:hover::before {
   background-image: url("../img/religious-yellow.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--religious:hover::before {
+      background-image: url("../img/religious-yellow@2x.png"); } }
 
 .programs__item--active.programs__item--religious::before {
   background-image: url("../img/religious-white.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .programs__item--active.programs__item--religious::before {
+      background-image: url("../img/religious-white@2x.png"); } }
 
 .programs__item--active {
   background-image: url("../img/arrow-end.svg"), linear-gradient(138.15deg, #ffc341 20.46%, #ffd701 65.31%);
@@ -1905,16 +1974,24 @@ button.swiper-pagination-bullet {
       padding-left: 10px;
       padding-right: 10px; } }
 
+.webp .want-to-go {
+  background-image: url("../img/backpack.webp"), url("../img/girl-flag-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .want-to-go {
+      background-image: url("../img/backpack@2x.webp"), url("../img/girl-flag-bg@2x.webp"); } }
+
+.no-webp .want-to-go {
+  background-image: url("../img/backpack.png"), url("../img/girl-flag-bg.jpg"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .want-to-go {
+      background-image: url("../img/backpack@2x.png"), url("../img/girl-flag-bg@2x.jpg"); } }
+
 .want-to-go {
   padding-top: 209px;
   padding-bottom: 130px;
-  background-image: url("../img/backpack.png"), url("../img/girl-flag-bg.jpg");
   background-repeat: no-repeat;
   background-size: 11%, 60%;
   background-position: left 135px, right top; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .want-to-go {
-      background-image: url("../img/backpack@2x.png"), url("../img/girl-flag-bg@2x.jpg"); } }
   @media (max-width: 767px) {
     .want-to-go {
       padding-top: 50px;
@@ -2085,16 +2162,24 @@ button.swiper-pagination-bullet {
       width: 264px;
       margin: 0 auto; } }
 
+.webp .how-to-go {
+  background-image: url("../img/how-to-go.webp"), url("../img/stamp.webp"), url("../img/how-to-go-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .how-to-go {
+      background-image: url("../img/how-to-go@2x.webp"), url("../img/stamp@2x.webp"), url("../img/how-to-go-bg@2x.webp"); } }
+
+.no-webp .how-to-go {
+  background-image: url("../img/how-to-go.png"), url("../img/stamp.png"), url("../img/how-to-go-bg.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .how-to-go {
+      background-image: url("../img/how-to-go@2x.png"), url("../img/stamp@2x.png"), url("../img/how-to-go-bg@2x.png"); } }
+
 .how-to-go {
   padding-top: 193px;
   padding-bottom: 150px;
-  background-image: url("../img/how-to-go.png"), url("../img/stamp.png"), url("../img/how-to-go-bg.png");
   background-repeat: no-repeat;
   background-size: 43%, 15%, 100%;
   background-position: 12px 160px, right center, left -40px; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .how-to-go {
-      background-image: url("../img/how-to-go@2x.png"), url("../img/stamp@2x.png"), url("../img/how-to-go-bg@2x.png"); } }
   @media (max-width: 1023px) {
     .how-to-go {
       padding-top: 84px;
@@ -2760,17 +2845,25 @@ button.swiper-pagination-bullet {
     .questions__item--active .questions__item-wrapper {
       margin-bottom: 15px; } }
 
+.webp .how-to-go {
+  background-image: url("../img/reviews-bg.webp"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .webp .how-to-go {
+      background-image: url("../img/reviews-bg@2x.webp"); } }
+
+.no-webp .how-to-go {
+  background-image: url("../img/reviews-bg.png"); }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .no-webp .how-to-go {
+      background-image: url("../img/reviews-bg@2x.png"); } }
+
 .reviews {
   max-width: 1366px;
   margin: 0 auto;
   margin-bottom: 105px;
-  background-image: url("../img/reviews-bg.png");
   background-repeat: no-repeat;
   background-position: right 24%;
   background-size: 523px; }
-  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .reviews {
-      background-image: url("../img/reviews-bg@2x.png"); } }
   @media (max-width: 1023px) {
     .reviews {
       margin-bottom: 80px; } }

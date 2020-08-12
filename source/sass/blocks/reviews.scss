@@ -1,16 +1,26 @@
-.reviews {
-  max-width: 1366px;
-  margin: 0 auto;
-  margin-bottom: 105px;
+.webp .how-to-go {
+  background-image: url("../img/reviews-bg.webp");
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/reviews-bg@2x.webp");
+  }
+}
+
+.no-webp .how-to-go {
   background-image: url("../img/reviews-bg.png");
-  background-repeat: no-repeat;
-  background-position: right 24%;
-  background-size: 523px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/reviews-bg@2x.png");
   }
+}
+
+.reviews {
+  max-width: 1366px;
+  margin: 0 auto;
+  margin-bottom: 105px;
+  background-repeat: no-repeat;
+  background-position: right 24%;
+  background-size: 523px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 80px;

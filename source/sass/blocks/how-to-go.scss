@@ -1,13 +1,22 @@
-.how-to-go {
-  padding-top: 193px;
-  padding-bottom: 150px;
+.webp .how-to-go {
+  background-image:
+    url("../img/how-to-go.webp"),
+    url("../img/stamp.webp"),
+    url("../img/how-to-go-bg.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image:
+      url("../img/how-to-go@2x.webp"),
+      url("../img/stamp@2x.webp"),
+      url("../img/how-to-go-bg@2x.webp");
+  }
+}
+
+.no-webp .how-to-go {
   background-image:
     url("../img/how-to-go.png"),
     url("../img/stamp.png"),
     url("../img/how-to-go-bg.png");
-  background-repeat: no-repeat;
-  background-size: 43%, 15%, 100%;
-  background-position: 12px 160px, right center, left -40px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image:
@@ -15,6 +24,14 @@
       url("../img/stamp@2x.png"),
       url("../img/how-to-go-bg@2x.png");
   }
+}
+
+.how-to-go {
+  padding-top: 193px;
+  padding-bottom: 150px;
+  background-repeat: no-repeat;
+  background-size: 43%, 15%, 100%;
+  background-position: 12px 160px, right center, left -40px;
 
   @media (max-width: $tablet-width) {
     padding-top: 84px;
@@ -22,7 +39,6 @@
     background-image: url("../img/stamp.png");
     background-size: 216px;
     background-position: right center;
-
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/stamp@2x.png");

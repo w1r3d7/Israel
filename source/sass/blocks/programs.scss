@@ -1,12 +1,23 @@
-.programs {
+.webp .programs {
+  background-image: url("../img/programs-bg.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/programs-bg@2x.webp");
+  }
+}
+
+.no-webp .programs {
   background-image: url("../img/programs-bg.png");
-  background-size: 680px 426px;
-  background-position: top right;
-  background-repeat: no-repeat;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/programs-bg@2x.png");
   }
+}
+
+.programs {
+  background-size: 680px 426px;
+  background-position: top right;
+  background-repeat: no-repeat;
 
   @media (max-width: $tablet-width) {
     background-size: 100%;
@@ -124,11 +135,19 @@
 
   &::before {
     background-image: url("../img/common-black.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/common-black@2x.png");
+    }
   }
 
   &:hover {
     &::before {
       background-image: url("../img/common-yellow.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/common-yellow@2x.png");
+      }
     }
   }
 }
@@ -136,6 +155,10 @@
 .programs__item--active.programs__item--common {
   &::before {
     background-image: url("../img/common-white.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/common-white@2x.png");
+    }
   }
 }
 
@@ -146,11 +169,19 @@
 
   &::before {
     background-image: url("../img/academic-black.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/academic-black@2x.png");
+    }
   }
 
   &:hover {
     &::before {
       background-image: url("../img/academic-yellow.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/academic-yellow@2x.png");
+      }
     }
   }
 }
@@ -158,6 +189,10 @@
 .programs__item--active.programs__item--academic {
   &::before {
     background-image: url("../img/academic-white.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/academic-white@2x.png");
+    }
   }
 }
 
@@ -168,11 +203,19 @@
 
   &::before {
     background-image: url("../img/internships-black.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/internships-black@2x.png");
+    }
   }
 
   &:hover {
     &::before {
       background-image: url("../img/internships-yellow.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/internships-yellow@2x.png");
+      }
     }
   }
 }
@@ -180,6 +223,10 @@
 .programs__item--active.programs__item--internships {
   &::before {
     background-image: url("../img/internships-white.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/internships-white@2x.png");
+    }
   }
 }
 
@@ -190,11 +237,19 @@
 
   &::before {
     background-image: url("../img/volunteering-black.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/volunteering-black@2x.png");
+    }
   }
 
   &:hover {
     &::before {
       background-image: url("../img/volunteering-yellow.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/volunteering-yellow@2x.png");
+      }
     }
   }
 }
@@ -202,6 +257,10 @@
 .programs__item--active.programs__item--volunteering {
   &::before {
     background-image: url("../img/volunteering-white.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/volunteering-white@2x.png");
+    }
   }
 }
 
@@ -212,11 +271,19 @@
 
   &::before {
     background-image: url("../img/religious-black.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/religious-black@2x.png");
+    }
   }
 
   &:hover {
     &::before {
       background-image: url("../img/religious-yellow.png");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/religious-yellow@2x.png");
+      }
     }
   }
 }
@@ -224,6 +291,10 @@
 .programs__item--active.programs__item--religious {
   &::before {
     background-image: url("../img/religious-white.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/religious-white@2x.png");
+    }
   }
 }
 
