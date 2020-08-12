@@ -1,18 +1,26 @@
 .questions {
-  padding-bottom: 130px;
+  padding-bottom: 140px;
   background-image: url("../img/questions-bg.png"), url("../img/bag.png"), url("../img/questions-bg-watercolor.png");
   background-repeat: no-repeat;
   background-position: right top, left bottom, center 37%;
   background-size: 47%, 11%, 100%;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/questions-bg@2x.png"), url("../img/bag@2x.png"), url("../img/questions-bg-watercolor@2x.png");
+  }
+
   @media (max-width: $tablet-width) {
     background-image: url("../img/bag.png");
     background-size: 12%;
     background-position: left 78%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bag@2x.png");
+    }
   }
 
   @media (max-width: $mobile-width) {
-    padding-bottom: 60px;
+    padding-bottom: 82px;
     background-size: 46%;
   }
 }
@@ -29,10 +37,10 @@
 .questions h2 {
   @include h2();
 
-  margin-bottom: 32px;
+  margin-bottom: 10px;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 22px;
+    margin-bottom: 0;
     text-align: center;
   }
 }
@@ -45,8 +53,6 @@
 }
 
 .questions__list li {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
   counter-increment: questions-counter;
   border-bottom: 1px solid $color-black-low-opacity;
 
@@ -57,20 +63,20 @@
     line-height: 170%;
     color: $color-yellow;
   }
-
-  @media (max-width: $mobile-width) {
-    padding-bottom: 17px;
-    margin-bottom: 21px;
-  }
 }
 
 .questions__item-wrapper {
   display: inline-flex;
   width: 91%;
+  padding-top: 38px;
+  padding-bottom: 31px;
+
   align-items: center;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     width: 93%;
+    padding-bottom: 17px;
   }
 }
 
@@ -123,7 +129,7 @@
   display: block;
   max-width: 480px;
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 33px;
 
   @media (max-width: $tablet-width) {
     max-width: 92%;
@@ -136,7 +142,7 @@
 }
 
 .questions__item--active .questions__item-wrapper {
-  margin-bottom: 22px;
+  padding-bottom: 22px;
 
   @media (max-width: $mobile-width) {
     margin-bottom: 15px;

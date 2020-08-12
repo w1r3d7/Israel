@@ -2581,19 +2581,25 @@ button.swiper-pagination-bullet {
       left: 57px; } }
 
 .questions {
-  padding-bottom: 130px;
+  padding-bottom: 140px;
   background-image: url("../img/questions-bg.png"), url("../img/bag.png"), url("../img/questions-bg-watercolor.png");
   background-repeat: no-repeat;
   background-position: right top, left bottom, center 37%;
   background-size: 47%, 11%, 100%; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .questions {
+      background-image: url("../img/questions-bg@2x.png"), url("../img/bag@2x.png"), url("../img/questions-bg-watercolor@2x.png"); } }
   @media (max-width: 1023px) {
     .questions {
       background-image: url("../img/bag.png");
       background-size: 12%;
       background-position: left 78%; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .questions {
+      background-image: url("../img/bag@2x.png"); } }
   @media (max-width: 767px) {
     .questions {
-      padding-bottom: 60px;
+      padding-bottom: 82px;
       background-size: 46%; } }
 
 .questions__wrapper {
@@ -2612,14 +2618,14 @@ button.swiper-pagination-bullet {
   letter-spacing: -0.02em;
   color: #1fc0fc;
   text-transform: uppercase;
-  margin-bottom: 32px; }
+  margin-bottom: 10px; }
   @media (max-width: 767px) {
     .questions h2 {
       font-size: 32px;
       line-height: 39px; } }
   @media (max-width: 767px) {
     .questions h2 {
-      margin-bottom: 22px;
+      margin-bottom: 0;
       text-align: center; } }
 
 .questions__list {
@@ -2629,8 +2635,6 @@ button.swiper-pagination-bullet {
   counter-reset: questions-counter; }
 
 .questions__list li {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
   counter-increment: questions-counter;
   border-bottom: 1px solid rgba(72, 72, 72, 0.2); }
   .questions__list li::before {
@@ -2639,22 +2643,22 @@ button.swiper-pagination-bullet {
     font-size: 28px;
     line-height: 170%;
     color: #ffc341; }
-  @media (max-width: 767px) {
-    .questions__list li {
-      padding-bottom: 17px;
-      margin-bottom: 21px; } }
 
 .questions__item-wrapper {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   width: 91%;
+  padding-top: 38px;
+  padding-bottom: 31px;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  cursor: pointer; }
   @media (max-width: 767px) {
     .questions__item-wrapper {
-      width: 93%; } }
+      width: 93%;
+      padding-bottom: 17px; } }
 
 .questions__item p:first-child {
   font-family: "Fira Sans", "Arial", sans-serif;
@@ -2704,7 +2708,7 @@ button.swiper-pagination-bullet {
   display: block;
   max-width: 480px;
   margin: 0;
-  margin-bottom: 6px; }
+  margin-bottom: 33px; }
   @media (max-width: 1023px) {
     .questions__item--active .questions__item-answer {
       max-width: 92%;
@@ -2715,7 +2719,7 @@ button.swiper-pagination-bullet {
           transform: rotate(180deg); }
 
 .questions__item--active .questions__item-wrapper {
-  margin-bottom: 22px; }
+  padding-bottom: 22px; }
   @media (max-width: 767px) {
     .questions__item--active .questions__item-wrapper {
       margin-bottom: 15px; } }
@@ -2929,6 +2933,10 @@ button.swiper-pagination-bullet {
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .details {
       background-image: url("../img/details-bg@2x.png"); } }
+  @media (max-width: 1023px) {
+    .details {
+      background-size: cover;
+      background-position: center; } }
 
 .details__wrapper {
   display: -webkit-box;
@@ -2969,7 +2977,7 @@ button.swiper-pagination-bullet {
 
 .details__description {
   width: 49%;
-  padding-left: 110px;
+  padding-left: 8%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
   @media (max-width: 1023px) {
@@ -3020,7 +3028,11 @@ button.swiper-pagination-bullet {
   padding-left: 22px;
   background-image: url("../img/marker.png");
   background-repeat: no-repeat;
-  background-position: 3px; }
+  background-position: 3px;
+  background-size: 12px; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .details__description-city {
+      background-image: url("../img/marker@2x.png"); } }
 
 .details__description-city p {
   opacity: 0.74; }
@@ -3029,7 +3041,8 @@ button.swiper-pagination-bullet {
   padding: 0;
   background-color: transparent;
   border: none;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  cursor: pointer; }
   .details__description-city button:hover, .details__description-city button:focus {
     opacity: 0.5; }
 
