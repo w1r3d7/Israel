@@ -1,6 +1,7 @@
 .details {
   max-width: 1366px;
   margin: 0 auto;
+  padding-bottom: 75px;
 
   background-image: url("../img/details-bg.png");
   background-repeat: no-repeat;
@@ -12,6 +13,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    padding-bottom: 61px;
     background-size: cover;
     background-position: center;
   }

@@ -1,5 +1,12 @@
+html {
+  height: 100%;
+}
+
 body {
   min-width: 320px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   font-family: $main-font;
   color: $color-black;
   font-size: 15px;
