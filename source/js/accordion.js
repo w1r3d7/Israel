@@ -1,7 +1,7 @@
 'use strict';
 (function () {
   var questionsList = document.querySelector('.questions__list');
-  var questionsLinks = questionsList.querySelectorAll('.questions__item-wrapper');
+  var questionsButtons = questionsList.querySelectorAll('.questions__item-wrapper');
 
   var onClickQuestionButton = function (evt) {
     var parentElement = evt.currentTarget.parentElement;
@@ -14,7 +14,10 @@
     }
   };
 
-  questionsLinks.forEach(function (it) {
-    it.addEventListener('click', onClickQuestionButton);
+  questionsButtons.forEach(function (it) {
+    it.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      onClickQuestionButton(evt);
+    });
   });
 })();
