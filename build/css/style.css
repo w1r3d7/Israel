@@ -1755,6 +1755,10 @@ button.swiper-pagination-bullet {
 .programs__item:not(.programs__item--active):hover, .programs__item:not(.programs__item--active):focus {
   color: #ffc341; }
 
+@media (max-width: 1023px) {
+  .programs__item--common {
+    min-width: 120px; } }
+
 .programs__item--common::before {
   background-image: url("../img/common-black.png"); }
 
@@ -1763,6 +1767,10 @@ button.swiper-pagination-bullet {
 
 .programs__item--active.programs__item--common::before {
   background-image: url("../img/common-white.png"); }
+
+@media (max-width: 1023px) {
+  .programs__item--academic {
+    min-width: 180px; } }
 
 .programs__item--academic::before {
   background-image: url("../img/academic-black.png"); }
@@ -1773,6 +1781,10 @@ button.swiper-pagination-bullet {
 .programs__item--active.programs__item--academic::before {
   background-image: url("../img/academic-white.png"); }
 
+@media (max-width: 1023px) {
+  .programs__item--internships {
+    min-width: 160px; } }
+
 .programs__item--internships::before {
   background-image: url("../img/internships-black.png"); }
 
@@ -1782,6 +1794,10 @@ button.swiper-pagination-bullet {
 .programs__item--active.programs__item--internships::before {
   background-image: url("../img/internships-white.png"); }
 
+@media (max-width: 1023px) {
+  .programs__item--volunteering {
+    min-width: 170px; } }
+
 .programs__item--volunteering::before {
   background-image: url("../img/volunteering-black.png"); }
 
@@ -1790,6 +1806,10 @@ button.swiper-pagination-bullet {
 
 .programs__item--active.programs__item--volunteering::before {
   background-image: url("../img/volunteering-white.png"); }
+
+@media (max-width: 1023px) {
+  .programs__item--religious {
+    min-width: 165px; } }
 
 .programs__item--religious::before {
   background-image: url("../img/religious-black.png"); }

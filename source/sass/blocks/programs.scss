@@ -118,6 +118,10 @@
 }
 
 .programs__item--common {
+  @media (max-width: $tablet-width) {
+    min-width: 120px;
+  }
+
   &::before {
     background-image: url("../img/common-black.png");
   }
@@ -136,6 +140,10 @@
 }
 
 .programs__item--academic {
+  @media (max-width: $tablet-width) {
+    min-width: 180px;
+  }
+
   &::before {
     background-image: url("../img/academic-black.png");
   }
@@ -154,6 +162,10 @@
 }
 
 .programs__item--internships {
+  @media (max-width: $tablet-width) {
+    min-width: 160px;
+  }
+
   &::before {
     background-image: url("../img/internships-black.png");
   }
@@ -172,6 +184,10 @@
 }
 
 .programs__item--volunteering {
+  @media (max-width: $tablet-width) {
+    min-width: 170px;
+  }
+
   &::before {
     background-image: url("../img/volunteering-black.png");
   }
@@ -190,6 +206,10 @@
 }
 
 .programs__item--religious {
+  @media (max-width: $tablet-width) {
+    min-width: 165px;
+  }
+
   &::before {
     background-image: url("../img/religious-black.png");
   }
