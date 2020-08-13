@@ -1,14 +1,26 @@
-.about-program {
-  text-align: center;
+.webp .about-program {
+  background-image: url("../img/about-program-bg.webp");
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/about-program-bg@2x.webp");
+  }
+}
+
+.no-webp .about-program {
   background-image: url("../img/about-program-bg.jpg");
-  background-color: $color-white;
-  background-size: 1366px 604px;
-  background-repeat: no-repeat;
-  background-position: center 158px;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/about-program-bg@2x.jpg");
   }
+}
+
+
+.about-program {
+  text-align: center;
+  background-color: $color-white;
+  background-size: 1366px 604px;
+  background-repeat: no-repeat;
+  background-position: center 158px;
 
   @media (max-width: $mobile-width) {
     background-size: 130%;
