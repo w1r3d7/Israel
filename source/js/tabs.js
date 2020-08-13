@@ -23,7 +23,9 @@
     }
   };
 
-  programsButtons.forEach(function (it) {
-    it.addEventListener('click', onClickProgramButton);
-  });
+  if (programsButtons) {
+    programsButtons.forEach(function (it) {
+      it.addEventListener('click', onClickProgramButton);
+    });
+  }
 })();

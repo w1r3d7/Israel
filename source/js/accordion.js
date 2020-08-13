@@ -14,10 +14,12 @@
     }
   };
 
-  questionsButtons.forEach(function (it) {
-    it.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      onClickQuestionButton(evt);
+  if (questionsButtons) {
+    questionsButtons.forEach(function (it) {
+      it.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        onClickQuestionButton(evt);
+      });
     });
-  });
+  }
 })();

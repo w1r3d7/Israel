@@ -171,6 +171,7 @@
 
   var wantToGoForm = document.querySelector('.want-to-go form');
   var wantToGoInput = wantToGoForm.querySelector('input');
+  var WANT_TO_GO_VALID_INPUT = 'want-to-go__input-wrapper--valid';
 
   if (wantToGoForm) {
     wantToGoInput.addEventListener('input', function (evt) {
@@ -181,12 +182,12 @@
     wantToGoForm.addEventListener('submit', function (evt) {
       evt.preventDefault();
 
-      var isInputValid = wantToGoInput.parentElement.classList.contains('want-to-go__input-wrapper--valid');
+      var isInputValid = wantToGoInput.parentElement.classList.contains(WANT_TO_GO_VALID_INPUT);
 
       if (isInputValid) {
         openComplitePopupAlone();
         wantToGoForm.reset();
-        wantToGoInput.parentElement.classList.remove('want-to-go__input-wrapper--valid');
+        wantToGoInput.parentElement.classList.remove(WANT_TO_GO_VALID_INPUT);
       } else {
         checkInputValidity(wantToGoInput);
       }
@@ -195,6 +196,8 @@
 
   var detailsForm = document.querySelector('.details__form');
   var detailsFormInputs = detailsForm.querySelectorAll('input');
+
+  var DETAILS_VALID_INPUT = 'details__form-input-wrapper--valid';
 
 
   if (detailsForm) {
@@ -210,13 +213,13 @@
     detailsForm.addEventListener('submit', function (evt) {
       evt.preventDefault();
 
-      var isInputValid = detailsFormInputs[0].parentElement.classList.contains('details__form-input-wrapper--valid') && detailsFormInputs[1].parentElement.classList.contains('details__form-input-wrapper--valid');
+      var isInputValid = detailsFormInputs[0].parentElement.classList.contains(DETAILS_VALID_INPUT) && detailsFormInputs[1].parentElement.classList.contains(DETAILS_VALID_INPUT);
 
       if (isInputValid) {
         openComplitePopupAlone();
         detailsForm.reset();
         detailsFormInputs.forEach(function (it) {
-          it.parentElement.classList.remove('details__form-input-wrapper--valid');
+          it.parentElement.classList.remove(DETAILS_VALID_INPUT);
         });
       } else {
         checkInputValidity(detailsFormInputs[0]);
@@ -224,5 +227,4 @@
       }
     });
   }
-
 })();
