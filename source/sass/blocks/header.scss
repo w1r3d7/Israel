@@ -42,6 +42,7 @@
   line-height: 18px;
   font-weight: 500;
   color: $color-black;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -64,6 +65,7 @@
   border-bottom: 1px dashed $color-black;
   color: $color-black;
   cursor: pointer;
+  outline: none;
 
   &:hover,
   &:focus {

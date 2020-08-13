@@ -1,4 +1,4 @@
-.webp .how-to-go {
+.webp .reviews {
   background-image: url("../img/reviews-bg.webp");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -6,7 +6,7 @@
   }
 }
 
-.no-webp .how-to-go {
+.no-webp .reviews {
   background-image: url("../img/reviews-bg.png");
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -145,6 +145,7 @@
   line-height: 150%;
   text-decoration: underline;
   color: $color-blue;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -178,6 +179,7 @@
 
 .reviews__item-wrapper li {
   opacity: 0.16;
+  outline: none;
 
   &:hover,
   &:focus {

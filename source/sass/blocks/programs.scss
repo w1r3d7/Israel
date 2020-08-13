@@ -135,6 +135,7 @@
 
   &::before {
     background-image: url("../img/common-black.png");
+    background-size: 28px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/common-black@2x.png");
@@ -169,6 +170,7 @@
 
   &::before {
     background-image: url("../img/academic-black.png");
+    background-size: 36px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/academic-black@2x.png");
@@ -203,6 +205,7 @@
 
   &::before {
     background-image: url("../img/internships-black.png");
+    background-size: 32px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/internships-black@2x.png");
@@ -237,6 +240,7 @@
 
   &::before {
     background-image: url("../img/volunteering-black.png");
+    background-size: 32px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/volunteering-black@2x.png");
@@ -271,6 +275,7 @@
 
   &::before {
     background-image: url("../img/religious-black.png");
+    background-size: 23px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/religious-black@2x.png");

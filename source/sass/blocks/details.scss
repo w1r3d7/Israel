@@ -22,6 +22,7 @@
 .details__wrapper {
   display: flex;
   margin-bottom: 68px;
+  width: 100%;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -37,6 +38,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: block;
   }
 }
 
@@ -105,6 +110,7 @@
   border: none;
   vertical-align: bottom;
   cursor: pointer;
+  outline: none;
 
   &:hover,
   &:focus {
@@ -175,6 +181,7 @@
 
 .details__description-curator a {
   opacity: 0.16;
+  outline: none;
 
   &:hover,
   &:focus {

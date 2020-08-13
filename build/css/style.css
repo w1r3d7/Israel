@@ -990,7 +990,8 @@ button.swiper-pagination-bullet {
   width: 11px;
   height: 18px;
   margin-right: 15px;
-  opacity: 0.2; }
+  opacity: 0.2;
+  outline: none; }
   .swiper-reviews-button-prev:hover, .swiper-reviews-button-prev:focus {
     opacity: 1; }
 
@@ -999,7 +1000,8 @@ button.swiper-pagination-bullet {
   height: 18px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  opacity: 0.2; }
+  opacity: 0.2;
+  outline: none; }
   .swiper-reviews-button-next:hover, .swiper-reviews-button-next:focus {
     opacity: 1; }
 
@@ -1053,7 +1055,8 @@ button.swiper-pagination-bullet {
   font-size: 15px;
   line-height: 18px;
   font-weight: 500;
-  color: #484848; }
+  color: #484848;
+  outline: none; }
   .header__information-phone:hover, .header__information-phone:focus {
     color: #ffc341; }
   @media (max-width: 767px) {
@@ -1070,7 +1073,8 @@ button.swiper-pagination-bullet {
   font-variant: small-caps;
   border-bottom: 1px dashed #484848;
   color: #484848;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   .header__information-order:hover, .header__information-order:focus {
     color: #ffc341; }
   @media (max-width: 767px) {
@@ -1169,7 +1173,8 @@ button.swiper-pagination-bullet {
   display: block;
   width: 76px;
   height: 132px;
-  background-image: url("../img/scroll-down.png"); }
+  background-image: url("../img/scroll-down.png");
+  outline: none; }
   .hero a:hover, .hero a:focus {
     opacity: 0.5; }
 
@@ -1387,6 +1392,10 @@ button.swiper-pagination-bullet {
       -ms-user-select: none;
           user-select: none;
   cursor: pointer; }
+  .popup__form-agreement-wrapper label:hover, .popup__form-agreement-wrapper label:focus {
+    opacity: 0.5; }
+    .popup__form-agreement-wrapper label:hover::before, .popup__form-agreement-wrapper label:focus::before {
+      opacity: 0.5; }
   .popup__form-agreement-wrapper label::before {
     position: absolute;
     content: "";
@@ -1444,6 +1453,7 @@ button.swiper-pagination-bullet {
   padding: 0;
   border: none;
   background-color: transparent;
+  outline: none;
   cursor: pointer; }
   .popup__close:hover, .popup__close:focus {
     opacity: 0.7; }
@@ -1784,7 +1794,8 @@ button.swiper-pagination-bullet {
     min-width: 120px; } }
 
 .programs__item--common::before {
-  background-image: url("../img/common-black.png"); }
+  background-image: url("../img/common-black.png");
+  background-size: 28px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .programs__item--common::before {
       background-image: url("../img/common-black@2x.png"); } }
@@ -1806,7 +1817,8 @@ button.swiper-pagination-bullet {
     min-width: 180px; } }
 
 .programs__item--academic::before {
-  background-image: url("../img/academic-black.png"); }
+  background-image: url("../img/academic-black.png");
+  background-size: 36px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .programs__item--academic::before {
       background-image: url("../img/academic-black@2x.png"); } }
@@ -1828,7 +1840,8 @@ button.swiper-pagination-bullet {
     min-width: 160px; } }
 
 .programs__item--internships::before {
-  background-image: url("../img/internships-black.png"); }
+  background-image: url("../img/internships-black.png");
+  background-size: 32px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .programs__item--internships::before {
       background-image: url("../img/internships-black@2x.png"); } }
@@ -1850,7 +1863,8 @@ button.swiper-pagination-bullet {
     min-width: 170px; } }
 
 .programs__item--volunteering::before {
-  background-image: url("../img/volunteering-black.png"); }
+  background-image: url("../img/volunteering-black.png");
+  background-size: 32px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .programs__item--volunteering::before {
       background-image: url("../img/volunteering-black@2x.png"); } }
@@ -1872,7 +1886,8 @@ button.swiper-pagination-bullet {
     min-width: 165px; } }
 
 .programs__item--religious::before {
-  background-image: url("../img/religious-black.png"); }
+  background-image: url("../img/religious-black.png");
+  background-size: 23px; }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .programs__item--religious::before {
       background-image: url("../img/religious-black@2x.png"); } }
@@ -2167,12 +2182,24 @@ button.swiper-pagination-bullet {
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .webp .how-to-go {
       background-image: url("../img/how-to-go@2x.webp"), url("../img/stamp@2x.webp"), url("../img/how-to-go-bg@2x.webp"); } }
+  @media (max-width: 1023px) {
+    .webp .how-to-go {
+      background-image: url("../img/stamp.webp"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .webp .how-to-go {
+      background-image: url("../img/stamp@2x.webp"); } }
 
 .no-webp .how-to-go {
   background-image: url("../img/how-to-go.png"), url("../img/stamp.png"), url("../img/how-to-go-bg.png"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     .no-webp .how-to-go {
       background-image: url("../img/how-to-go@2x.png"), url("../img/stamp@2x.png"), url("../img/how-to-go-bg@2x.png"); } }
+  @media (max-width: 1023px) {
+    .no-webp .how-to-go {
+      background-image: url("../img/stamp.png"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+    .no-webp .how-to-go {
+      background-image: url("../img/stamp@2x.png"); } }
 
 .how-to-go {
   padding-top: 193px;
@@ -2187,9 +2214,6 @@ button.swiper-pagination-bullet {
       background-image: url("../img/stamp.png");
       background-size: 216px;
       background-position: right center; } }
-  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
-    .how-to-go {
-      background-image: url("../img/stamp@2x.png"); } }
 
 .how-to-go__wrapper {
   display: -webkit-box;
@@ -2779,7 +2803,8 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   .questions__item-wrapper::after {
     position: absolute;
     content: "";
@@ -2845,16 +2870,16 @@ button.swiper-pagination-bullet {
     .questions__item--active .questions__item-wrapper {
       margin-bottom: 15px; } }
 
-.webp .how-to-go {
+.webp .reviews {
   background-image: url("../img/reviews-bg.webp"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .webp .how-to-go {
+    .webp .reviews {
       background-image: url("../img/reviews-bg@2x.webp"); } }
 
-.no-webp .how-to-go {
+.no-webp .reviews {
   background-image: url("../img/reviews-bg.png"); }
   @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-    .no-webp .how-to-go {
+    .no-webp .reviews {
       background-image: url("../img/reviews-bg@2x.png"); } }
 
 .reviews {
@@ -2995,7 +3020,8 @@ button.swiper-pagination-bullet {
   font-size: 17px;
   line-height: 150%;
   text-decoration: underline;
-  color: #1fc0fc; }
+  color: #1fc0fc;
+  outline: none; }
   .reviews__item-wrapper a:first-of-type:hover, .reviews__item-wrapper a:first-of-type:focus {
     color: #63d3fd; }
   @media (max-width: 767px) {
@@ -3027,7 +3053,8 @@ button.swiper-pagination-bullet {
       margin: 0; } }
 
 .reviews__item-wrapper li {
-  opacity: 0.16; }
+  opacity: 0.16;
+  outline: none; }
   .reviews__item-wrapper li:hover, .reviews__item-wrapper li:focus {
     opacity: 1; }
 
@@ -3073,7 +3100,8 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 68px; }
+  margin-bottom: 68px;
+  width: 100%; }
   @media (max-width: 1023px) {
     .details__wrapper {
       -webkit-box-orient: vertical;
@@ -3096,6 +3124,9 @@ button.swiper-pagination-bullet {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  @media (max-width: 767px) {
+    .details__map {
+      display: block; } }
 
 @media (max-width: 767px) {
   .details__map img {
@@ -3173,7 +3204,8 @@ button.swiper-pagination-bullet {
   background-color: transparent;
   border: none;
   vertical-align: bottom;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
   .details__description-city button:hover, .details__description-city button:focus {
     opacity: 0.5; }
 
@@ -3238,7 +3270,8 @@ button.swiper-pagination-bullet {
   display: flex; }
 
 .details__description-curator a {
-  opacity: 0.16; }
+  opacity: 0.16;
+  outline: none; }
   .details__description-curator a:hover, .details__description-curator a:focus {
     opacity: 1; }
 
@@ -3493,7 +3526,8 @@ button.swiper-pagination-bullet {
       margin-right: 16px; } }
 
 .page-footer__socials a {
-  opacity: 0.16; }
+  opacity: 0.16;
+  outline: none; }
   .page-footer__socials a:focus, .page-footer__socials a:hover {
     opacity: 1; }
 
