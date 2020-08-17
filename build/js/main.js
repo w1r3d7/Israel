@@ -26,6 +26,47 @@
 
 'use strict';
 (function () {
+  var phoneInputs = document.querySelectorAll('input[type="tel"]');
+  var COUNTRY_CODE = '+7';
+  var onInputPhoneInput = ({target}) => {
+    var matrix = `${COUNTRY_CODE} (___) ___ __ __`;
+    var def = matrix.replace(/\D/g, '');
+    var i = 0;
+    var val = target.value.replace(/\D/g, '');
+    if (def.length >= val.length) {
+      val = def;
+    }
+    target.value = matrix.replace(/./g, (a) => {
+      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a;
+    });
+  };
+  var onFocusPhoneInput = ({target}) => {
+    if (!target.value) {
+      target.value = COUNTRY_CODE;
+      target.addEventListener('input', onInputPhoneInput);
+      target.addEventListener('blur', onBlurPhoneInput);
+    }
+  };
+  var onBlurPhoneInput = ({target}) => {
+    if (target.value === COUNTRY_CODE) {
+      target.value = '';
+      target.removeEventListener('input', onInputPhoneInput);
+      target.removeEventListener('blur', onBlurPhoneInput);
+    }
+  };
+  var initPhoneMask = () => {
+    if (phoneInputs.length) {
+      phoneInputs.forEach((input) => {
+        input.addEventListener('focus', onFocusPhoneInput);
+      });
+    }
+  };
+
+  initPhoneMask();
+})();
+
+'use strict';
+(function () {
   var openPopupButton = document.querySelector('.header__information-order');
   var popup = document.querySelector('.popup');
   var closePopupButtons = popup.querySelectorAll('.popup__close');
@@ -39,9 +80,7 @@
   var body = document.querySelector('body');
   var storage = window.localStorage;
 
-  var inputPhoneValidate = function inputPhoneValidate(phoneEvent) {
-    phoneEvent.target.value = phoneEvent.target.value.replace(/[^0-9+()-]/g, '');
-  };
+  var PHONE_CHARS = '18';
 
   var checkInputValidity = function (input) {
     var inputClass = input.parentElement.classList[0];
@@ -51,12 +90,22 @@
       return;
     }
 
-    if (input.value.length) {
-      inputParent.classList.remove(inputClass + '--invalid');
-      inputParent.classList.add(inputClass + '--valid');
+    if (input.type === 'tel') {
+      if (String(input.value.length) === PHONE_CHARS) {
+        inputParent.classList.remove(inputClass + '--invalid');
+        inputParent.classList.add(inputClass + '--valid');
+      } else {
+        inputParent.classList.add(inputClass + '--invalid');
+        inputParent.classList.remove(inputClass + '--valid');
+      }
     } else {
-      inputParent.classList.add(inputClass + '--invalid');
-      inputParent.classList.remove(inputClass + '--valid');
+      if (input.value.length) {
+        inputParent.classList.remove(inputClass + '--invalid');
+        inputParent.classList.add(inputClass + '--valid');
+      } else {
+        inputParent.classList.add(inputClass + '--invalid');
+        inputParent.classList.remove(inputClass + '--valid');
+      }
     }
   };
 
@@ -85,9 +134,6 @@
       it.addEventListener('input', function (evt) {
         evt.stopPropagation();
         storage.setItem(evt.target.name, evt.target.value);
-        if (evt.target.type === 'tel') {
-          inputPhoneValidate(evt);
-        }
       });
       it.addEventListener('input', function (evt) {
         checkInputValidity(evt.target);
@@ -201,7 +247,6 @@
 
   if (wantToGoForm) {
     wantToGoInput.addEventListener('input', function (evt) {
-      inputPhoneValidate(evt);
       checkInputValidity(evt.target);
     });
 
@@ -220,7 +265,7 @@
     });
   }
 
-  var detailsForm = document.querySelector('.details__form');
+  var detailsForm = document.querySelector('.details__form').querySelector('form');
   var detailsFormInputs = detailsForm.querySelectorAll('input');
 
   var DETAILS_VALID_INPUT = 'details__form-input-wrapper--valid';
@@ -232,7 +277,6 @@
     });
 
     detailsFormInputs[1].addEventListener('input', function (evt) {
-      inputPhoneValidate(evt);
       checkInputValidity(evt.target);
     });
 

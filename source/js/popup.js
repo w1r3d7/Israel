@@ -13,9 +13,7 @@
   var body = document.querySelector('body');
   var storage = window.localStorage;
 
-  var inputPhoneValidate = function inputPhoneValidate(phoneEvent) {
-    phoneEvent.target.value = phoneEvent.target.value.replace(/[^0-9+()-]/g, '');
-  };
+  var PHONE_CHARS = '18';
 
   var checkInputValidity = function (input) {
     var inputClass = input.parentElement.classList[0];
@@ -25,12 +23,22 @@
       return;
     }
 
-    if (input.value.length) {
-      inputParent.classList.remove(inputClass + '--invalid');
-      inputParent.classList.add(inputClass + '--valid');
+    if (input.type === 'tel') {
+      if (String(input.value.length) === PHONE_CHARS) {
+        inputParent.classList.remove(inputClass + '--invalid');
+        inputParent.classList.add(inputClass + '--valid');
+      } else {
+        inputParent.classList.add(inputClass + '--invalid');
+        inputParent.classList.remove(inputClass + '--valid');
+      }
     } else {
-      inputParent.classList.add(inputClass + '--invalid');
-      inputParent.classList.remove(inputClass + '--valid');
+      if (input.value.length) {
+        inputParent.classList.remove(inputClass + '--invalid');
+        inputParent.classList.add(inputClass + '--valid');
+      } else {
+        inputParent.classList.add(inputClass + '--invalid');
+        inputParent.classList.remove(inputClass + '--valid');
+      }
     }
   };
 
@@ -59,9 +67,6 @@
       it.addEventListener('input', function (evt) {
         evt.stopPropagation();
         storage.setItem(evt.target.name, evt.target.value);
-        if (evt.target.type === 'tel') {
-          inputPhoneValidate(evt);
-        }
       });
       it.addEventListener('input', function (evt) {
         checkInputValidity(evt.target);
@@ -175,7 +180,6 @@
 
   if (wantToGoForm) {
     wantToGoInput.addEventListener('input', function (evt) {
-      inputPhoneValidate(evt);
       checkInputValidity(evt.target);
     });
 
@@ -194,7 +198,7 @@
     });
   }
 
-  var detailsForm = document.querySelector('.details__form');
+  var detailsForm = document.querySelector('.details__form').querySelector('form');
   var detailsFormInputs = detailsForm.querySelectorAll('input');
 
   var DETAILS_VALID_INPUT = 'details__form-input-wrapper--valid';
@@ -206,7 +210,6 @@
     });
 
     detailsFormInputs[1].addEventListener('input', function (evt) {
-      inputPhoneValidate(evt);
       checkInputValidity(evt.target);
     });
 

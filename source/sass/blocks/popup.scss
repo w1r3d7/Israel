@@ -31,6 +31,11 @@
   }
 }
 
+.popup__wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
 .popup__wrapper p {
   margin: 0;
   margin-bottom: 30px;
@@ -193,10 +198,10 @@
 }
 
 .popup__form-agreement-wrapper input[type="checkbox"]:focus + label,
-.popup__form-agreement-wrapper input[type="checkbox"]:focus + label::after,
+.popup__form-agreement-wrapper input[type="checkbox"]:focus + label::before,
 .popup__form-agreement-wrapper input[type="checkbox"]:hover + label,
-.popup__form-agreement-wrapper input[type="checkbox"]:hover + label::after {
-  opacity: 0.8;
+.popup__form-agreement-wrapper input[type="checkbox"]:hover + label::before {
+  opacity: 0.5;
 }
 
 .popup__form-agreement-wrapper input[type="checkbox"]:checked + label::after {
@@ -216,6 +221,7 @@
   box-sizing: border-box;
   padding-left: 28px;
   margin: 0 auto;
+  order: 5;
 
   @media (max-width: $mobile-width) {
     padding-left: 8px;
