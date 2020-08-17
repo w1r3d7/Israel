@@ -73,8 +73,8 @@
   margin-right: 36px;
 
   @media (max-width: $mobile-width) {
-    margin: 0;
-    margin-left: 42px;
+    display: block;
+    margin: 0 auto;
     width: 240px;
   }
 }

@@ -290,7 +290,8 @@
 
 
 .details__form input {
-  height: 59px;
+  padding-top: 21px;
+  padding-bottom: 14px;
   width: 100%;
   padding-left: 40px;
   padding-right: calc(100% - (216px + 40px));
@@ -298,11 +299,13 @@
   border: 2px solid $input-default;
   border-radius: 80px;
   outline: none;
+  font-size: 17px;
+  line-height: 17px;
 
 
   &::placeholder {
     font-size: 17px;
-    line-height: 55px;
+    line-height: 17px;
     font-weight: 500;
     text-transform: lowercase;
     font-variant: small-caps;
